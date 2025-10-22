@@ -1,0 +1,18 @@
+:root{
+    --azul-claro: #8CB1D5;
+    --azul-escuro: #414094;
+    --light-mode-bg: #F7F7FA;
+    --dark-mode-bg: #1C222E;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    flex: 1;
+
+}
