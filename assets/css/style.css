@@ -1,18 +1,49 @@
-:root{
+:root {
     --azul-claro: #8CB1D5;
     --azul-escuro: #414094;
     --light-mode-bg: #F7F7FA;
     --dark-mode-bg: #1C222E;
 }
 
-body{
+body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-main{
+#progressSteps {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    flex: 1;
+    justify-content: center;
+    margin-bottom: 1rem;
+    gap: 5px;
+}
 
+.step-box {
+    width: 45px;
+    height: 25px;
+    background: var(--azul-claro);
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.navbar-transparent {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+} 
+
+.step-active,
+.current-step {
+    background: var(--azul-escuro); 
+}
+
+.form-section { display: none; }
+.form-section.active { display: block; }
+
+.navbar-transparent {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+}
+
+a, .nav-link {
+    color: var(--azul-escuro) !important;
 }

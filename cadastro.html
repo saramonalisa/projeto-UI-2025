@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma Lattes</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-transparent">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="#">
+      <img src="assets/logo.svg" alt="logo">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarTop" aria-controls="navbarTop"
+            aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <li class="nav-item"><a class="nav-link" href="login-email.html">Entrar</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Cadastrar-se</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container min-vh-100 d-flex justify-content-center align-items-start py-5">
+  <div class="card w-100" style="max-width: 800px;">
+    <div class="card-body">
+
+      <p class="text-center">Já tem uma conta? <a href="login-email.html">Entre</a></p>
+
+      <div class="d-flex justify-content-center mb-4" id="progressSteps">
+        <div class="step-box" data-step="0"></div>
+        <div class="step-box" data-step="1"></div>
+        <div class="step-box" data-step="2"></div>
+        <div class="step-box" data-step="3"></div>
+        <div class="step-box" data-step="4"></div>
+        <div class="step-box" data-step="5"></div>
+      </div>
+
+      <form id="cadastroForm">
+        <div class="form-section" id="step-0">
+          <h5 class="fw-bold">Cadastrar-se no Currículo Lattes</h5>
+          <small class="text-wrap">Leia as condições do Termo de adesão e compromisso da base de dados Lattes. Termo de adesão e compromisso do sistema de currículo da Plataforma Lattes. Inclua a informação abaixo e siga os passos para completar o seu cadastro</small>
+          <label class="mt-3">País de Nacionalidade</label>
+          <select class="form-select">
+            <option>Brasileira</option>
+            <option>Estrangeira</option>
+          </select>
+          <button type="button" class="btn btn-primary mt-3 w-100 next-btn">Próximo</button>
+        </div>
+
+        <div class="form-section" id="step-1">
+          <h5>Informação Pessoal</h5>
+          <input class="form-control mt-3" placeholder="Nome completo">
+          <input class="form-control mt-3" placeholder="CPF">
+          <input class="form-control mt-3" placeholder="Data de nascimento">
+          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
+          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        </div>
+
+        <div class="form-section" id="step-2">
+          <h5>Endereço e contato</h5>
+          <input class="form-control mt-3" placeholder="Endereço">
+          <input class="form-control mt-3" placeholder="Telefone">
+          <input class="form-control mt-3" placeholder="Email">
+          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
+          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        </div>
+
+        <div class="form-section" id="step-3">
+          <h5>Formação acadêmica</h5>
+          <input class="form-control mt-3" placeholder="Curso">
+          <input class="form-control mt-3" placeholder="Instituição">
+          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
+          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        </div>
+
+        <div class="form-section" id="step-4">
+          <h5>Atuação profissional</h5>
+          <input class="form-control mt-3" placeholder="Cargo">
+          <input class="form-control mt-3" placeholder="Empresa">
+          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
+          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        </div>
+
+        <div class="form-section" id="step-5">
+          <h5>Área de atuação</h5>
+          <input class="form-control mt-3" placeholder="Área principal">
+          <input class="form-control mt-3" placeholder="Linha de pesquisa">
+          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
+          <button type="submit" class="btn btn-success mt-3 w-100">Confirmar</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-light border-top mt-5">
+  <div class="container py-4 text-center text-md-start">
+    <div class="row">
+      <div class="col-md-6 mb-3">
+        <h6 class="fw-bold">Plataforma Lattes</h6>
+        <p class="mb-0">Desenvolvido pelo CNPq – Conselho Nacional de Desenvolvimento Científico e Tecnológico.</p>
+        <p class="small text-muted">© 2025 CNPq. Todos os direitos reservados.</p>
+      </div>
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold">Links úteis</h6>
+        <ul class="list-unstyled">
+          <li><a href="#" class="text-decoration-none text-muted">Ajuda</a></li>
+          <li><a href="#" class="text-decoration-none text-muted">Política de privacidade</a></li>
+          <li><a href="#" class="text-decoration-none text-muted">Acessibilidade</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3 mb-3">
+        <h6 class="fw-bold">Contato</h6>
+        <p class="mb-0 small text-muted">
+          atendimento@cnpq.br<br />
+          Tel: (61) 3211-4000
+        </p>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  let currentStep = 0;
+  const steps = document.querySelectorAll('.form-section');
+  const boxes = document.querySelectorAll('.step-box');
+  const totalSteps = steps.length;
+
+  function updateSteps() {
+    steps.forEach((el, i) => {
+      el.style.display = (i === currentStep) ? 'block' : 'none';
+    });
+    boxes.forEach((b, i) => {
+      b.classList.toggle('step-active', i < currentStep);
+      b.classList.toggle('current-step', i === currentStep);
+    });
+  }
+
+  document.querySelectorAll('.next-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentStep < totalSteps - 1) currentStep++;
+      updateSteps();
+    });
+  });
+
+  document.querySelectorAll('.prev-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      if (currentStep > 0) currentStep--;
+      updateSteps();
+    });
+  });
+
+  updateSteps();
+});
+</script>
+
+</body>
+</html>
