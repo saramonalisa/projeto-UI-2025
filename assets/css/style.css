@@ -1,82 +1,70 @@
-:root {
-    --azul-claro: #8CB1D5;
-    --azul-escuro: #414094;
-    --light-mode-bg: #F7F7FA;
-    --dark-mode-bg: #1C222E;
+:root { 
+  --azul-claro: #8CB1D5;
+  --azul-escuro: #414094;
+  --light-mode-bg: #F7F7FA;
+  --dark-mode-bg: #1C222E;
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  background-color: #f5f5f5;
 }
 
 #progressSteps {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 1rem;
-    gap: 5px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+  gap: 5px;
 }
 
-<<<<<<< HEAD
 .step-box {
-    width: 45px;
-    height: 25px;
-    background: var(--azul-claro);
-    border-radius: 4px;
-    transition: background 0.3s;
+  width: 45px;
+  height: 25px;
+  background: var(--azul-claro);
+  border-radius: 4px;
+  transition: background 0.3s;
 }
-
-.navbar-transparent {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-} 
 
 .step-active,
 .current-step {
-    background: var(--azul-escuro); 
+  background: var(--azul-escuro); 
 }
 
-.form-section { display: none; }
-.form-section.active { display: block; }
+.form-section { 
+  display: none; 
+}
+.form-section.active { 
+  display: block; 
+}
 
 .navbar-transparent {
-    background: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-}
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+} 
 
 a, .nav-link {
-    color: var(--azul-escuro) !important;
-}
-=======
+  color: var(--azul-escuro) !important;
 }
 
-body {
-    background-color: #f5f5f5;
-    font-family: "Segoe UI", Arial, sans-serif;
-  }
-  
-  header img {
-    border-radius: 4px;
-  }
-  
-  .navbar-nav .nav-link {
-    color: #000;
-    margin: 0 8px;
-  }
-  
-  .navbar-nav .nav-link:hover {
-    color: #0d6efd;
-  }
-  
-  .card img {
-    background-color: #e9ecef;
-    object-fit: cover;
-  }
-  
-  section ul {
-    list-style-type: disc;
-    padding-left: 20px;
-  }
-  
->>>>>>> 3745496d41d77e1b38a4a9f9e4934ca007b51aa7
+header img {
+  border-radius: 4px;
+}
+
+.navbar-nav .nav-link {
+  margin: 0 8px;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+.card img {
+  background-color: #e9ecef;
+  object-fit: cover;
+}
+
+section ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
