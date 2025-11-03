@@ -1,136 +1,85 @@
-<!doctype html>
-<html lang="pt-BR">
+<!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Cadastro de Currículo</title>
-
-  <!-- Bootstrap CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma Lattes</title>
+  
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  
+  <!-- CSS externo -->
+  <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
 
-  <div class="container py-5">
-    <div class="card shadow-sm">
-      <div class="card-body">
-        <h2 class="text-center mb-4">Formulário de Currículo</h2>
+<body>
+  <!-- Cabeçalho -->
+  <header class="bg-light shadow-sm py-2">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <img src="https://via.placeholder.com/32" class="me-2" alt="Logo">
+        <div class="fw-bold lh-1">
+          Plataforma<br><span class="text-secondary">Lattes</span>
+        </div>
+      </div>
+      <i class="bi bi-person-fill fs-4"></i>
+    </div>
+  </header>
 
-        <form>
-          <!-- DADOS PESSOAIS -->
-          <h4 class="mt-4">🧍 Dados Pessoais</h4>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="nome" class="form-label">Nome completo</label>
-              <input type="text" id="nome" class="form-control" placeholder="Seu nome completo" required>
-            </div>
-            <div class="col-md-3">
-              <label for="nascimento" class="form-label">Data de nascimento</label>
-              <input type="date" id="nascimento" class="form-control" required>
-            </div>
-            <div class="col-md-3">
-              <label for="cpf" class="form-label">CPF</label>
-              <input type="text" id="cpf" class="form-control" placeholder="000.000.000-00" maxlength="14">
-            </div>
-            <div class="col-md-6">
-              <label for="email" class="form-label">E-mail</label>
-              <input type="email" id="email" class="form-control" placeholder="seuemail@exemplo.com" required>
-            </div>
-            <div class="col-md-6">
-              <label for="telefone" class="form-label">Telefone</label>
-              <input type="tel" id="telefone" class="form-control" placeholder="(00) 00000-0000">
-            </div>
-            <div class="col-12">
-              <label for="endereco" class="form-label">Endereço</label>
-              <input type="text" id="endereco" class="form-control" placeholder="Rua, número, bairro, cidade, estado">
-            </div>
-          </div>
+  <!-- Menu de navegação -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-white border-top border-bottom">
+    <div class="container justify-content-center">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Dados gerais</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Formação</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Atuação</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Produção</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Inovação</a></li>
+        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Eventos</a></li>
+      </ul>
+    </div>
+  </nav>
 
-          <hr>
-
-          <!-- FORMAÇÃO ACADÊMICA -->
-          <h4 class="mt-4">🎓 Formação Acadêmica</h4>
-          <div class="row g-3">
-            <div class="col-md-6">
-              <label for="curso" class="form-label">Curso</label>
-              <input type="text" id="curso" class="form-control" placeholder="Ex: Bacharelado em Engenharia">
-            </div>
-            <div class="col-md-3">
-              <label for="instituicao" class="form-label">Instituição</label>
-              <input type="text" id="instituicao" class="form-control" placeholder="Universidade X">
-            </div>
-            <div class="col-md-3">
-              <label for="ano_formatura" class="form-label">Ano de Conclusão</label>
-              <input type="number" id="ano_formatura" class="form-control" placeholder="2025">
-            </div>
-          </div>
-
-          <hr>
-
-          <!-- PRODUÇÃO CIENTÍFICA -->
-          <h4 class="mt-4">📚 Produção Científica</h4>
-          <div class="mb-3">
-            <label for="producao" class="form-label">Descreva suas produções</label>
-            <textarea id="producao" class="form-control" rows="3" placeholder="Artigos, resumos, relatórios..."></textarea>
-          </div>
-
-          <hr>
-
-          <!-- EXPERIÊNCIA PROFISSIONAL -->
-          <h4 class="mt-4">💼 Experiência Profissional</h4>
-          <div class="mb-3">
-            <label for="experiencia" class="form-label">Detalhe suas experiências</label>
-            <textarea id="experiencia" class="form-control" rows="3" placeholder="Empresas, cargos, atividades..."></textarea>
-          </div>
-
-          <hr>
-
-          <!-- PROJETOS DE PESQUISA -->
-          <h4 class="mt-4">🧪 Projetos de Pesquisa</h4>
-          <div class="mb-3">
-            <textarea id="projetos" class="form-control" rows="3" placeholder="Descreva os projetos em que participou ou liderou..."></textarea>
-          </div>
-
-          <hr>
-
-          <!-- ORIENTAÇÕES -->
-          <h4 class="mt-4">👩‍🏫 Orientações</h4>
-          <div class="mb-3">
-            <textarea id="orientacoes" class="form-control" rows="3" placeholder="Trabalhos orientados, monografias, TCCs..."></textarea>
-          </div>
-
-          <hr>
-
-          <!-- PUBLICAÇÕES -->
-          <h4 class="mt-4">📰 Publicações</h4>
-          <div class="mb-3">
-            <textarea id="publicacoes" class="form-control" rows="3" placeholder="Artigos, livros, revistas científicas..."></textarea>
-          </div>
-
-          <hr>
-
-          <!-- CURSOS E CONFERÊNCIAS -->
-          <h4 class="mt-4">🧭 Cursos e Conferências</h4>
-          <div class="mb-3">
-            <textarea id="cursos" class="form-control" rows="3" placeholder="Cursos extras, workshops, conferências..."></textarea>
-          </div>
-
-          <hr>
-
-          <!-- BOTÕES -->
-          <div class="d-flex justify-content-between">
-            <button type="reset" class="btn btn-outline-secondary">Limpar</button>
+  <!-- Conteúdo principal -->
+  <main class="container my-4">
+    <div class="card shadow-sm mb-4">
+      <div class="card-body d-flex">
+        <img src="https://via.placeholder.com/80" alt="Foto perfil" class="rounded me-3">
+        <div class="flex-grow-1">
+          <div class="d-flex justify-content-between align-items-start">
+            <h5 class="fw-bold mb-1">Maria Silva</h5>
             <div>
-              <button type="button" class="btn btn-success me-2">Salvar Currículo</button>
-              <button type="button" class="btn btn-primary">Compartilhar</button>
+              <button class="btn btn-outline-secondary btn-sm me-2">
+                <i class="bi bi-graph-up"></i> Indicadores de produção
+              </button>
+              <button class="btn btn-outline-dark btn-sm">
+                <i class="bi bi-envelope"></i> Contato
+              </button>
             </div>
           </div>
-        </form>
+          <p class="mt-2 mb-0">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum, 
+            elit vitae congue blandit, ex lorem blandit magna, id egestas quam urna ac felis. 
+            Fusce eget ex at mi commodo dignissim eu eget erat. Nullam viverra congue risus vitae vehicula.
+          </p>
+        </div>
       </div>
     </div>
-  </div>
+
+    <!-- Formação -->
+    <section class="bg-light p-4 rounded shadow-sm">
+      <h5 class="fw-bold mb-3">Formação</h5>
+      <ul class="mb-0">
+        <li>Lorem ipsum</li>
+        <li>Dolor sit amet</li>
+        <li>Consectetur adipiscing elit</li>
+        <li>Phasellus bibendum</li>
+      </ul>
+    </section>
+  </main>
 
   <!-- Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
