@@ -10,6 +10,35 @@ body {
   background-color: #f5f5f5;
 }
 
+.btn-primary {
+  background-color: var(--azul-escuro) !important;
+  border: none;
+}
+.btn-primary:hover {
+  background-color: var(--azul-claro) !important;
+}
+
+.bg-primary {
+  background-color: var(--azul-escuro) !important;
+  color: white !important;
+}
+
+.text-primary {
+  color: var(--azul-escuro) !important;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+footer {
+  background-color: var(--azul-escuro) !important;
+  color: white;
+  padding: 1rem 0;
+  text-align: center;
+}
+
 #progressSteps {
   display: flex;
   justify-content: center;
