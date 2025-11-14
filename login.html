@@ -28,7 +28,7 @@
   </div>
 </nav>
 
-  <div class="container d-flex align-items-center justify-content-center">
+  <div class="container d-flex align-items-center justify-content-center mt-5">
     <div class="w-100 form-container">
       <div>
         <h3 class="my-4 text-center fw-bold">Lattes | Login</h3>
@@ -40,7 +40,7 @@
           <span id="emailLogin" class="login-type">E-mail</span>
         </div>
 
-        <form id="loginForm">
+  <form id="loginForm" novalidate>
           <div id="cpfField" class="mb-3">
             <label for="cpf" class="form-label">CPF</label>
             <input
@@ -81,7 +81,7 @@
           <a href="#" class="text-decoration-none">Esqueceu sua senha?</a>
         </p>
 
-          <button type="submit" class="btn btn-primary w-100">Entrar</button>
+          <button type="button" id="loginSubmitBtn" class="btn btn-primary w-100">Entrar</button>
         </form>
 
       </div>
@@ -109,25 +109,10 @@
       cpfLogin.classList.remove('active');
     });
 
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const formData = new FormData(form);
-      const data = Object.fromEntries(formData.entries());
-
-      fetch('/login', { 
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(data)
-      })
-      .then(res => res.json())
-      .then(res => {
-        if (res.success) {
-          alert('Login bem-sucedido!');
-        } else {
-          alert('Erro: ' + res.message);
-        }
-      })
-      .catch(err => alert('Erro no servidor'));
+    // Redireciona para home.html independentemente dos valores dos campos
+    const submitBtn = document.getElementById('loginSubmitBtn');
+    submitBtn.addEventListener('click', () => {
+      window.location.href = 'home.html';
     });
   </script>
 

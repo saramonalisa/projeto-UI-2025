@@ -30,8 +30,8 @@
   <div class="nav-bottom border-bottom">
     <div class="container">
       <div class="d-flex flex-wrap justify-content-center py-2">
-        <a class="nav-link px-3" href="#">Currículos</a>
-        <a class="nav-link px-3" href="#">Instituições</a>
+        <a class="nav-link px-3" href="abacv.html">Currículos</a>
+        <a class="nav-link px-3" href="abainst.html">Instituições</a>
         <a class="nav-link px-3" href="estatisticas.html">Dados e estatísticas</a>
 
         <div class="dropdown">
@@ -42,7 +42,7 @@
           </ul>
         </div>
 
-        <a class="nav-link px-3" href="#">Ajuda</a>
+        <a class="nav-link px-3" href="ajuda.html">Ajuda</a>
       </div>
     </div>
   </div>
@@ -51,28 +51,27 @@
     <div class="w-100" style="max-width: 80%">
 
       <h3 class="text-center mb-4">Bem-vindo à Plataforma Lattes!</h3>
-      <h5 class="text-center mb-4 text-secondary">Busque currículo ou instituição na base de dados</h5>
+      <p class="text-center mb-4 text-secondary">Busque currículo ou instituição na base de dados</p>
 
       <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
 
           <form id="formBusca" class="input-group mb-3" role="search">
-            <input id="campoBusca" type="search" class="form-control form-control-lg" placeholder="Nome da pessoa ou instituição…">
-            <button class="btn btn-outline-secondary btn-lg" type="submit">
+            <input id="campoBusca" type="search" class="form-control" placeholder="Nome da pessoa ou instituição…">
+            <button class="btn btn-outline-secondary" type="submit">
               <i class="bi bi-search"></i>
             </button>
-          </form>
 
-          <div class="text-center mb-4">
-            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+            <div class="text-center mx-3">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
               Filtros
             </button>
-            <ul class="dropdown-menu w-100">
-              <li><a class="dropdown-item" href="#">Por instituição</a></li>
-              <li><a class="dropdown-item" href="#">Por área</a></li>
-              <li><a class="dropdown-item" href="#">Por data</a></li>
+            <ul class="dropdown-menu w-70">
+              <li><a class="dropdown-item" href="#">Doutores</a></li>
+              <li><a class="dropdown-item" href="#">Demais pesquisadores (Mestres, Graduados, Estudantes, Técnicos, etc.)</a></li>
             </ul>
           </div>
+          </form>
 
           <div id="resultadoBusca" class="mt-4"></div>
 
@@ -145,7 +144,7 @@ document.getElementById("formBusca").addEventListener("submit", function(e){
 
       function montarPagina() {
         resultadoDiv.innerHTML = `
-          <h5 class="mb-3 text-secondary">Resultados encontrados</h5>
+          <p class="mb-3 text-secondary">Resultados encontrados</p>
           <div class="accordion" id="accordionResultados"></div>
           <div id="paginacao" class="mt-3 d-flex justify-content-center"></div>
         `;

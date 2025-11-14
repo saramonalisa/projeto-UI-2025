@@ -1,22 +1,15 @@
-@font-face {
-  font-family: 'Poppins';
-  src: url('../fonts/Poppins-Regular.woff2') format('woff2'),
-  url('../fonts/Poppins-Regular.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root {
   --azul-claro: #8CB1D5;
   --azul-escuro: #414094;
-  --light-mode-bg: #ffffff;
-  --dark-mode-bg: #1C222E;
+  --azul-medio: #6A8AC7;
 }
 
 /* BASE */
 body {
   font-family: "Poppins", sans-serif !important;
-  background-color: var(--light-mode-bg);
+  background-color: white;
   color: #333;
 }
 
@@ -28,6 +21,7 @@ a,
   color: var(--azul-escuro) !important;
   transition: color 0.3s ease;
 }
+
 .nav-link:hover {
   color: var(--azul-claro) !important;
 }
@@ -44,6 +38,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff !important;
   transition: background 0.3s ease, transform 0.2s ease;
 }
+
 .btn-primary:hover {
   background: var(--azul-claro) !important;
   transform: translateY(-2px);
@@ -59,26 +54,33 @@ h1, h2, h3, h4, h5, h6 {
   background: var(--azul-escuro) !important;
   color: white !important;
 }
+
 .text-primary {
   color: var(--azul-escuro) !important;
 }
 
-/* NAVBAR (BOTTOM) */
+/* NAVBAR */
+.navbar {
+  background: linear-gradient(90deg, var(--azul-escuro), var(--azul-claro));
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .nav-bottom {
-  background: linear-gradient(90deg, rgba(140, 177, 213, 0.9) 0%, rgba(65, 64, 148, 0.85) 100%) !important;
+  background: linear-gradient(135deg, rgba(140, 177, 213, 0.25) 0%, rgba(65, 64, 148, 0.15) 100%);
   color: #fff !important;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
   backdrop-filter: blur(4px);
 }
 
 .navbar-nav .nav-link:hover {
-  color: #e0e0ff !important;
+  color: #8080a8 !important;
 }
 
 /* HEADER / IMAGENS */
 header img {
   border-radius: 4px;
 }
+
 .card img {
   background-color: #e9ecef;
   object-fit: cover;
@@ -93,10 +95,12 @@ header img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease;
 }
+
 .card:hover {
   transform: translateY(-4px);
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
 }
+
 .section-title {
   font-size: 1.1rem;
   font-weight: 600;
@@ -163,6 +167,7 @@ footer {
 .form-section {
   display: none;
 }
+
 .form-section.active {
   display: block;
   background: linear-gradient(135deg, rgba(140, 177, 213, 0.2) 0%, rgba(65, 64, 148, 0.15) 100%);
@@ -183,6 +188,7 @@ textarea {
   background: linear-gradient(135deg, rgba(140, 177, 213, 0.1) 0%, rgba(65, 64, 148, 0.05) 100%);
   transition: all 0.3s ease;
 }
+
 input:focus,
 textarea:focus,
 select:focus {
@@ -195,6 +201,7 @@ select:focus {
 .login-type {
   cursor: pointer;
 }
+
 .login-type.active {
   font-weight: bold;
   text-decoration: underline;
@@ -209,6 +216,7 @@ select:focus {
   border: 3px solid #fff;
   box-shadow: 0 4px 12px rgba(0,0,0,.08);
 }
+
 .profile-thumb {
   width: 70px;
   height: 70px;
@@ -217,10 +225,12 @@ select:focus {
   border: 2px solid #fff;
   box-shadow: 0 2px 6px rgba(0,0,0,.1);
 }
+
 .card-header-alt {
   background: linear-gradient(90deg, var(--azul-escuro), var(--azul-claro));
   color: white;
 }
+
 .meta-label {
   font-weight: 600;
   color: #495057;
@@ -259,14 +269,17 @@ section ul {
   gap: 20px;
   align-items: start;
 }
+
 .container.content > h2 {
   grid-column: 1 / -1;
 }
+
 .sidebar {
   width: 220px;
   top: 100px;
   align-self: start;
 }
+
 .content {
   margin-left: 0;
 }
@@ -276,6 +289,16 @@ section ul {
   text-decoration: none;
   color: inherit;
 }
+
 .list-group-item a:hover {
   text-decoration: underline;
+}
+
+/* Charts sizing */
+.card canvas {
+  max-height: 140px;
+  max-width: 420px;
+  width: 100%;
+  display: block;
+  margin: 0 auto;
 }

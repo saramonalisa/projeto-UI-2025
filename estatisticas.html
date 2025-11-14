@@ -60,35 +60,35 @@
           <div class="col-md-6">
             <div class="card p-3">
               <h5 class="section-title">Distribuição por Região</h5>
-              <canvas id="regiaoChart" height="200"></canvas>
+              <canvas id="regiaoChart" height="140"></canvas>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="card p-3">
-              <h5 class="section-title">Distribuição por Sexo</h5>
-              <canvas id="sexoChart" height="200"></canvas>
+              <h5 class="section-title">Distribuição por Gênero</h5>
+              <canvas id="generoChart" height="140"></canvas>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="card p-3">
               <h5 class="section-title">Distribuição por Cor/Raça</h5>
-              <canvas id="corChart" height="200"></canvas>
+              <canvas id="corChart" height="140"></canvas>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="card p-3">
               <h5 class="section-title">Distribuição por Faixa Etária</h5>
-              <canvas id="idadeChart" height="200"></canvas>
+              <canvas id="idadeChart" height="140"></canvas>
             </div>
           </div>
 
           <div class="col-md-6">
             <div class="card p-3">
               <h5 class="section-title">Distribuição por Área de Atuação</h5>
-              <canvas id="areaChart" height="200"></canvas>
+              <canvas id="areaChart" height="140"></canvas>
             </div>
           </div>
         </div>
@@ -106,9 +106,8 @@
           <div class="col-md-3 mb-3">
             <h6 class="fw-bold">Links úteis</h6>
             <ul class="list-unstyled">
-              <li><a href="#" class="text-decoration-none text-muted">Ajuda</a></li>
-              <li><a href="#" class="text-decoration-none text-muted">Política de privacidade</a></li>
-              <li><a href="#" class="text-decoration-none text-muted">Acessibilidade</a></li>
+              <li><a href="ajuda.html" class="text-decoration-none text-muted">Ajuda</a></li>
+              <li><a href="termos.html" class="text-decoration-none text-muted">Política de privacidade</a></li>
             </ul>
           </div>
           <div class="col-md-3 mb-3">
@@ -135,7 +134,7 @@
         }]
       };
 
-      const sexoData = {
+      const generoData = {
         labels: ['Masculino', 'Feminino', 'Outro'],
         datasets: [{
           label: 'Pesquisadores',
@@ -173,7 +172,7 @@
 
       // Configuração dos gráficos
       new Chart(document.getElementById('regiaoChart'), { type: 'pie', data: regiaoData });
-      new Chart(document.getElementById('sexoChart'), { type: 'doughnut', data: sexoData });
+      new Chart(document.getElementById('generoChart'), { type: 'doughnut', data: generoData });
       new Chart(document.getElementById('corChart'), { type: 'bar', data: corData, options: { responsive:true } });
       new Chart(document.getElementById('idadeChart'), { type: 'bar', data: idadeData, options: { responsive:true } });
       new Chart(document.getElementById('areaChart'), { type: 'pie', data: areaData });
