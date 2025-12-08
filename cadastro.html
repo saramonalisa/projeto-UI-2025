@@ -1,234 +1,517 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plataforma Lattes</title>
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css">
-<link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tom-select/dist/css/tom-select.bootstrap5.min.css" rel="stylesheet">
+  <title>Cadastro - Plataforma Lattes</title>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light">
-  <div class="container-fluid">
-    <a class="navbar-brand fw-bold" href="index.html">
-      <img src="assets/logo.svg" alt="logo">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-            data-bs-target="#navbarTop" aria-controls="navbarTop"
-            aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
-      <ul class="navbar-nav mb-2 mb-lg-0">
-        <li class="nav-item"><a class="nav-link" href="login.html">Entrar</a></li>
-        <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastrar-se</a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
+  <div id="header"></div>
 
-<main class="container min-vh-100 d-flex justify-content-center align-items-start py-5">
-  <div class="w-100" style="max-width: 800px;">
-    <div>
-
-      <p class="text-center">Já tem uma conta? <a href="login.html">Entre</a></p>
-
-      <div class="progress-container mb-5">
-  <div class="d-flex justify-content-center" id="progressSteps">
-    <div class="d-flex flex-column align-items-center step-box" data-step="0">
-      <i class="bi bi-person-plus-fill fs-3 mb-1"></i>
-      <span class="text-center">Cadastrar-se</span>
-    </div>
-    <div class="d-flex flex-column align-items-center step-box" data-step="1">
-      <i class="bi bi-person-lines-fill fs-3 mb-1"></i>
-      <span class="text-center">Informação pessoal</span>
-    </div>
-    <div class="d-flex flex-column align-items-center step-box" data-step="2">
-      <i class="bi bi-geo-alt-fill fs-3 mb-1"></i>
-      <span class="text-center">Endereço e contato</span>
-    </div>
-    <div class="d-flex flex-column align-items-center step-box" data-step="3">
-      <i class="bi bi-book-fill fs-3 mb-1"></i>
-      <span class="text-center">Formação acadêmica</span>
-    </div>
-    <div class="d-flex flex-column align-items-center step-box" data-step="4">
-      <i class="bi bi-briefcase-fill fs-3 mb-1"></i>
-      <span class="text-center">Atuação profissional</span>
-    </div>
-    <div class="d-flex flex-column align-items-center step-box" data-step="5">
-      <i class="bi bi-diagram-3-fill fs-3 mb-1"></i>
-      <span class="text-center">Área de atuação</span>
-    </div>
-  </div>
-</div>
-
-  <form id="cadastroForm" action="home.html" method="get" novalidate>
-        <div class="form-section" id="step-0">
-          <h5 class="fw-bold">Cadastrar-se no Currículo Lattes</h5>
-          <small class="text-wrap">Leia as condições do Termo de adesão e compromisso da base de dados Lattes. Termo de adesão e compromisso do sistema de currículo da Plataforma Lattes. Inclua a informação abaixo e siga os passos para completar o seu cadastro</small>
-          <label class="mt-3">País de Nacionalidade</label>
-          <!-- Select pesquisável; o valor enviado será o código ISO (ex: BR) -->
-          <select id="paisNacionalidade" name="paisCodigo" class="form-select"></select>
-          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        
+        <div class="text-center mb-2">
+          <p class="mb-0">
+            Já tem uma conta? 
+            <a href="login.html" class="fw-bold">Entre</a>
+          </p>
         </div>
 
-        <div class="form-section" id="step-1">
-          <h5>Informação Pessoal</h5>
-          <input class="form-control mt-3" placeholder="Nome completo">
-          <input class="form-control mt-3" placeholder="CPF">
-          <input class="form-control mt-3" placeholder="Data de nascimento">
-          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
-          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        <div class="progress-container mb-1">
+          <div class="progress-line"></div>
+          <div class="d-flex justify-content-center" id="progressSteps">
+            <div class="d-flex flex-column align-items-center mx-2" data-step="0">
+              <div class="step-box">
+                <i class="bi bi-person-plus-fill fs-3"></i>
+              </div>
+              <span class="text-center small">Cadastrar-se</span>
+            </div>
+            <div class="d-flex flex-column align-items-center mx-2" data-step="1">
+              <div class="step-box">
+                <i class="bi bi-person-lines-fill fs-3"></i>
+              </div>
+              <span class="text-center small">Informação pessoal</span>
+            </div>
+            <div class="d-flex flex-column align-items-center mx-2" data-step="2">
+              <div class="step-box">
+                <i class="bi bi-geo-alt-fill fs-3"></i>
+              </div>
+              <span class="text-center small">Endereço e contato</span>
+            </div>
+            <div class="d-flex flex-column align-items-center mx-2" data-step="3">
+              <div class="step-box">
+                <i class="bi bi-book-fill fs-3"></i>
+              </div>
+              <span class="text-center small">Formação acadêmica</span>
+            </div>
+            <div class="d-flex flex-column align-items-center mx-2" data-step="4">
+              <div class="step-box">
+                <i class="bi bi-briefcase-fill fs-3"></i>
+              </div>
+              <span class="text-center small">Atuação profissional</span>
+            </div>
+            <div class="d-flex flex-column align-items-center" data-step="5">
+              <div class="step-box">
+                <i class="bi bi-diagram-3-fill fs-3"></i>
+              </div>
+              <span class="text-center small">Área de atuação</span>
+            </div>
+          </div>
         </div>
 
-        <div class="form-section" id="step-2">
-          <h5>Endereço e contato</h5>
-          <input class="form-control mt-3" placeholder="Endereço">
-          <input class="form-control mt-3" placeholder="Telefone">
-          <input class="form-control mt-3" placeholder="Email">
-          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
-          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        <div class="card border-0 shadow">
+          <div class="card-body p-4 p-md-5">
+            <form id="cadastroForm" action="home.html" method="get" novalidate>
+              
+              <div class="form-section" id="step-0">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-3">
+                    <div class="bg-primary text-white p-2 me-3">
+                      <i class="bi bi-file-text"></i>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">Termo de Adesão</h4>
+                      <p class="text-muted mb-0">Leia atentamente antes de prosseguir</p>
+                    </div>
+                  </div>
+                  
+                  <div class="border rounded p-4 mb-4" style="max-height: 300px; overflow-y: auto;">
+                    <h5 class="mb-3">Termo de Adesão e Compromisso</h5>
+                    <p class="small">
+                      Ao cadastrar-se na Plataforma Lattes, você declara estar ciente e de acordo com os seguintes termos:
+                    </p>
+                    <ul class="small">
+                      <li class="mb-2">As informações fornecidas são de minha responsabilidade e devem refletir a verdade.</li>
+                      <li class="mb-2">O CNPq poderá utilizar os dados para fins estatísticos e de avaliação da produção científica.</li>
+                      <li class="mb-2">Comprometo-me a manter minhas informações atualizadas periodicamente.</li>
+                      <li class="mb-2">Autorizo a verificação das informações por instituições de fomento à pesquisa.</li>
+                      <li class="mb-2">Os dados estão protegidos pela Lei Geral de Proteção de Dados (LGPD).</li>
+                      <li class="mb-2">Entendo que informações falsas podem resultar no cancelamento do cadastro.</li>
+                    </ul>
+                    <p class="small mb-0">
+                      <strong>Data de vigência:</strong> Este termo entra em vigor a partir da data do cadastro.
+                    </p>
+                  </div>
+                  
+                  <div class="form-check mb-4">
+                    <input class="form-check-input" type="checkbox" id="aceitarTermos" required>
+                    <label class="form-check-label" for="aceitarTermos">
+                      <strong>Li e aceito os termos acima</strong>
+                    </label>
+                    <div class="invalid-feedback">
+                      Você precisa aceitar os termos para continuar.
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mb-4">
+                  <label class="form-label fw-bold">País de Nacionalidade *</label>
+                  <select id="paisNacionalidade" name="paisCodigo" class="form-select" required></select>
+                  <div class="form-text">Selecione seu país de nacionalidade</div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <a href="index.html" class="btn btn-outline-secondary">
+                    <i class="bi bi-arrow-left me-1"></i> Cancelar
+                  </a>
+                  <button type="button" class="btn btn-primary next-btn">
+                    Próximo <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-section" id="step-1">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="bg-primary text-white p-2 me-3">
+                      <i class="bi bi-person"></i>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">Informações Pessoais</h4>
+                      <p class="text-muted mb-0">Preencha seus dados básicos</p>
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Nome Completo *</label>
+                      <input type="text" class="form-control" placeholder="Digite seu nome completo" required>
+                      <div class="form-text">Como aparece em documentos oficiais</div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">CPF *</label>
+                      <input type="text" class="form-control" placeholder="000.000.000-00" required>
+                      <div class="form-text">Apenas números</div>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Data de Nascimento *</label>
+                      <input type="date" class="form-control" required>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Gênero</label>
+                      <select class="form-select">
+                        <option value="">Selecione</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                        <option value="O">Outro</option>
+                        <option value="N">Prefiro não informar</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-secondary prev-btn">
+                    <i class="bi bi-arrow-left me-1"></i> Voltar
+                  </button>
+                  <button type="button" class="btn btn-primary next-btn">
+                    Próximo <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-section" id="step-2">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="bg-primary text-white p-2 me-3">
+                      <i class="bi bi-geo-alt"></i>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">Endereço e Contato</h4>
+                      <p class="text-muted mb-0">Informações para contato</p>
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-8">
+                      <label class="form-label fw-bold">Endereço *</label>
+                      <input type="text" class="form-control" placeholder="Rua, número, complemento" required>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <label class="form-label fw-bold">CEP *</label>
+                      <input type="text" class="form-control" placeholder="00000-000" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Cidade *</label>
+                      <input type="text" class="form-control" placeholder="Sua cidade" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Estado *</label>
+                      <select class="form-select" required>
+                        <option value="">Selecione</option>
+                        <option value="AC">Acre</option>
+                        <option value="AL">Alagoas</option>
+                        <option value="AP">Amapá</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Telefone *</label>
+                      <input type="tel" class="form-control" placeholder="(00) 00000-0000" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">E-mail *</label>
+                      <input type="email" class="form-control" placeholder="seu@email.com" required>
+                      <div class="form-text">Será usado para login e comunicações</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-secondary prev-btn">
+                    <i class="bi bi-arrow-left me-1"></i> Voltar
+                  </button>
+                  <button type="button" class="btn btn-primary next-btn">
+                    Próximo <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-section" id="step-3">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="bg-primary text-white p-2 me-3">
+                      <i class="bi bi-mortarboard"></i>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">Formação Acadêmica</h4>
+                      <p class="text-muted mb-0">Sua trajetória educacional</p>
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Nível de Formação Superior *</label>
+                      <select class="form-select" required>
+                        <option value="">Selecione</option>
+                        <option value="graduacao">Graduação</option>
+                        <option value="especializacao">Especialização</option>
+                        <option value="mestrado">Mestrado</option>
+                        <option value="doutorado">Doutorado</option>
+                        <option value="posdoc">Pós-Doutorado</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-md-8">
+                      <label class="form-label fw-bold">Curso/Área *</label>
+                      <input type="text" class="form-control" placeholder="Ex: Ciência da Computação" required>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <label class="form-label fw-bold">Ano de Conclusão *</label>
+                      <input type="number" class="form-control" placeholder="2020" min="1950" max="2030" required>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Instituição *</label>
+                      <input type="text" class="form-control" placeholder="Nome da universidade/instituição" required>
+                      <div class="form-text">Pode adicionar mais formações depois</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-secondary prev-btn">
+                    <i class="bi bi-arrow-left me-1"></i> Voltar
+                  </button>
+                  <button type="button" class="btn btn-primary next-btn">
+                    Próximo <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-section" id="step-4">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="bg-primary text-white p-2 me-3">
+                      <i class="bi bi-briefcase"></i>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">Atuação Profissional</h4>
+                      <p class="text-muted mb-0">Sua experiência profissional atual</p>
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Vínculo Institucional *</label>
+                      <select class="form-select" required>
+                        <option value="">Selecione</option>
+                        <option value="professor">Professor/Pesquisador</option>
+                        <option value="estudante">Estudante</option>
+                        <option value="tecnico">Técnico</option>
+                        <option value="outro">Outro</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Cargo/Função *</label>
+                      <input type="text" class="form-control" placeholder="Ex: Professor Adjunto" required>
+                    </div>
+                    
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold">Regime de Trabalho</label>
+                      <select class="form-select">
+                        <option value="">Selecione</option>
+                        <option value="integral">Tempo Integral</option>
+                        <option value="parcial">Tempo Parcial</option>
+                        <option value="horista">Horista</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Instituição/Empresa *</label>
+                      <input type="text" class="form-control" placeholder="Nome da instituição atual" required>
+                      <div class="form-text">Pode adicionar mais experiências depois</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-secondary prev-btn">
+                    <i class="bi bi-arrow-left me-1"></i> Voltar
+                  </button>
+                  <button type="button" class="btn btn-primary next-btn">
+                    Próximo <i class="bi bi-arrow-right ms-1"></i>
+                  </button>
+                </div>
+              </div>
+
+              <div class="form-section" id="step-5">
+                <div class="mb-4">
+                  <div class="d-flex align-items-center mb-4">
+                    <div class="bg-primary text-white p-2 me-3">
+                      <i class="bi bi-diagram-3"></i>
+                    </div>
+                    <div>
+                      <h4 class="mb-0">Área de Atuação</h4>
+                      <p class="text-muted mb-0">Sua especialização e interesses</p>
+                    </div>
+                  </div>
+
+                  <div class="row g-3">
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Grande Área do Conhecimento *</label>
+                      <select class="form-select" required>
+                        <option value="">Selecione</option>
+                        <option value="ciencias-exatas">Ciências Exatas e da Terra</option>
+                        <option value="ciencias-biologicas">Ciências Biológicas</option>
+                        <option value="engenharias">Engenharias</option>
+                        <option value="ciencias-saude">Ciências da Saúde</option>
+                        <option value="ciencias-agrarias">Ciências Agrárias</option>
+                        <option value="ciencias-sociais">Ciências Sociais Aplicadas</option>
+                        <option value="ciencias-humanas">Ciências Humanas</option>
+                        <option value="linguistica">Linguística, Letras e Artes</option>
+                      </select>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Área Principal *</label>
+                      <input type="text" class="form-control" placeholder="Ex: Inteligência Artificial" required>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Linha de Pesquisa</label>
+                      <textarea class="form-control" rows="3" placeholder="Descreva suas principais linhas de pesquisa ou interesse"></textarea>
+                      <div class="form-text">Separe por vírgulas ou ponto e vírgula</div>
+                    </div>
+                    
+                    <div class="col-md-12">
+                      <label class="form-label fw-bold">Palavras-chave</label>
+                      <input type="text" class="form-control" placeholder="Ex: machine learning, bioinformática, sustentabilidade">
+                      <div class="form-text">Termos que descrevem seu trabalho (opcional)</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="alert alert-info">
+                  <div class="d-flex">
+                    <i class="bi bi-info-circle fs-5 me-3"></i>
+                    <div>
+                      <h6 class="alert-heading">Pronto para finalizar!</h6>
+                      <p class="mb-0">
+                        Revise todas as informações antes de confirmar. 
+                        Você poderá editar esses dados posteriormente na sua área de usuário.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                  <button type="button" class="btn btn-outline-secondary prev-btn">
+                    <i class="bi bi-arrow-left me-1"></i> Voltar
+                  </button>
+                  <button type="submit" class="btn btn-success">
+                    <i class="bi bi-check-circle me-1"></i> Finalizar Cadastro
+                  </button>
+                </div>
+              </div>
+
+            </form>
+          </div>
         </div>
 
-        <div class="form-section" id="step-3">
-          <h5>Formação acadêmica</h5>
-          <input class="form-control mt-3" placeholder="Curso">
-          <input class="form-control mt-3" placeholder="Instituição">
-          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
-          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
+        <div class="text-center mt-4">
+          <p class="small text-muted">
+            <i class="bi bi-shield-lock me-1"></i>
+            Seus dados estão protegidos pela LGPD. 
+            <a href="privacidade.html" class="text-decoration-none">Saiba mais</a>
+          </p>
         </div>
 
-        <div class="form-section" id="step-4">
-          <h5>Atuação profissional</h5>
-          <input class="form-control mt-3" placeholder="Cargo">
-          <input class="form-control mt-3" placeholder="Empresa">
-          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
-          <button type="button" class="btn btn-primary mt-3 next-btn">Próximo</button>
-        </div>
-
-        <div class="form-section" id="step-5">
-          <h5>Área de atuação</h5>
-          <input class="form-control mt-3" placeholder="Área principal">
-          <input class="form-control mt-3" placeholder="Linha de pesquisa">
-          <button type="button" class="btn btn-secondary mt-3 prev-btn">Voltar</button>
-          <button type="submit" class="btn btn-primary mt-3">Confirmar</button>
-        </div>
-
-      </form>
-    </div>
-  </div>
-</main>
-
-<footer class="border-top mt-5">
-  <div class="container py-4 text-center text-md-start">
-    <div class="row">
-      <div class="col-md-6 mb-3">
-        <h6 class="fw-bold text-black">Plataforma Lattes</h6>
-        <p class="small">© 2025 CNPq. Todos os direitos reservados.</p>
       </div>
-
-      <div class="col-md-3 mb-3">
-        <h6 class="fw-bold text-black">Links úteis</h6>
-        <ul class="list-unstyled">
-          <li><a href="ajuda.html" class="text-white">Ajuda</a></li>
-          <li><a href="sobre.html" class="text-white">Política de privacidade</a></li>
-        </ul>
-      </div>
-
-      <div class="col-md-3 mb-3">
-        <h6 class="fw-bold text-black">Contato</h6>
-        <p class="mb-0 small">
-          atendimento@cnpq.br<br>
-          Tel: (61) 3211-4000
-        </p>
-      </div>
     </div>
-  </div>
-</footer>
+  </main>
 
-<script src="https://cdn.jsdelivr.net/npm/tom-select/dist/js/tom-select.complete.min.js"></script>
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Carrega países para o select de nacionalidade e inicializa Tom Select para busca
-  const paisSelect = document.getElementById('paisNacionalidade');
-  let countriesData = [];
-  if (paisSelect) {
-    fetch('data/paises.json')
-      .then(res => res.json())
-      .then(json => {
-        countriesData = Array.isArray(json.countries) ? json.countries : [];
-        const defaultCode = json.default || 'BR';
-        // popula select (value = código, texto = nome)
-        countriesData.forEach(c => {
-          const opt = document.createElement('option');
-          opt.value = c.code;
-          opt.textContent = c.name;
-          paisSelect.appendChild(opt);
-        });
+  <div id="footer"></div>
 
-        // define opção selecionada por padrão
-        const defaultOption = Array.from(paisSelect.options).find(o => o.value === defaultCode);
-        if (defaultOption) defaultOption.selected = true;
-
-        // inicializa Tom Select para dar suporte a busca dentro do select
-        // Tom Select exibirá o texto das opções e o valor enviado permanecerá o código ISO
-        try {
-          // eslint-disable-next-line no-undef
-          new TomSelect('#paisNacionalidade', {
-            create: false,
-            sortField: { field: 'text', direction: 'asc' },
-            placeholder: 'Selecione ou pesquise...'
+  <script src="assets/js/component-loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const paisSelect = document.getElementById('paisNacionalidade');
+    let countriesData = [];
+    if (paisSelect) {
+      fetch('data/paises.json')
+        .then(res => res.json())
+        .then(json => {
+          countriesData = Array.isArray(json.countries) ? json.countries : [];
+          const defaultCode = json.default || 'BR';
+          countriesData.forEach(c => {
+            const opt = document.createElement('option');
+            opt.value = c.code;
+            opt.textContent = c.name;
+            paisSelect.appendChild(opt);
           });
-        } catch (e) {
-          // se a biblioteca não carregar, o select permanece funcional sem busca avançada
-          console.warn('Tom Select não pôde ser inicializado:', e);
-        }
-      })
-      .catch(err => {
-        console.error('Erro ao carregar data/paises.json', err);
-        // fallback: adiciona Brasil
-        const opt = document.createElement('option');
-        opt.value = 'BR';
-        opt.textContent = 'Brasil';
-        paisSelect.appendChild(opt);
-        opt.selected = true;
+
+          const defaultOption = Array.from(paisSelect.options).find(o => o.value === defaultCode);
+          if (defaultOption) defaultOption.selected = true;
+
+          try {
+            new TomSelect('#paisNacionalidade', {
+              create: false,
+              sortField: { field: 'text', direction: 'asc' },
+              placeholder: 'Selecione ou pesquise...'
+            });
+          } catch (e) {
+            console.warn('Tom Select não pôde ser inicializado:', e);
+          }
+        })
+        .catch(err => {
+          console.error('Erro ao carregar data/paises.json', err);
+          const opt = document.createElement('option');
+          opt.value = 'BR';
+          opt.textContent = 'Brasil';
+          paisSelect.appendChild(opt);
+          opt.selected = true;
+        });
+    }
+    let currentStep = 0;
+    const steps = document.querySelectorAll('.form-section');
+    const boxes = document.querySelectorAll('.step-box');
+    const totalSteps = steps.length;
+
+    function updateSteps() {
+      steps.forEach((el, i) => {
+        el.style.display = (i === currentStep) ? 'block' : 'none';
       });
-  }
-  let currentStep = 0;
-  const steps = document.querySelectorAll('.form-section');
-  const boxes = document.querySelectorAll('.step-box');
-  const totalSteps = steps.length;
+      boxes.forEach((b, i) => {
+        b.classList.toggle('step-active', i < currentStep);
+        b.classList.toggle('current-step', i === currentStep);
+      });
+    }
 
-  function updateSteps() {
-    steps.forEach((el, i) => {
-      el.style.display = (i === currentStep) ? 'block' : 'none';
+    document.querySelectorAll('.next-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (currentStep < totalSteps - 1) currentStep++;
+        updateSteps();
+      });
     });
-    boxes.forEach((b, i) => {
-      b.classList.toggle('step-active', i < currentStep);
-      b.classList.toggle('current-step', i === currentStep);
-    });
-  }
 
-  document.querySelectorAll('.next-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (currentStep < totalSteps - 1) currentStep++;
-      updateSteps();
+    document.querySelectorAll('.prev-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        if (currentStep > 0) currentStep--;
+        updateSteps();
+      });
     });
+
+    updateSteps();
   });
-
-  document.querySelectorAll('.prev-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      if (currentStep > 0) currentStep--;
-      updateSteps();
-    });
-  });
-
-  updateSteps();
-});
-</script>
+  </script>
 
 </body>
 </html>

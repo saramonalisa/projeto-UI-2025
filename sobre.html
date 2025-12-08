@@ -10,109 +10,223 @@
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">
-        <img src="assets/logo.svg" alt="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Entrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cadastro.html">Cadastrar-se</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="header"></div>
+  <div id="navbar"></div>
 
-  <div class="nav-bottom border-bottom">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-center py-2">
-        <a class="nav-link px-3" href="abacv.html">Currículos</a>
-        <a class="nav-link px-3" href="abainst.html">Instituições</a>
-        <a class="nav-link px-3" href="estatisticas.html">Dados e estatísticas</a>
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10">
         
-        <div class="dropdown">
-          <a class="nav-link px-3 dropdown-toggle" href="#" id="sobreDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            Sobre
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="sobreDropdown">
-            <li><a class="dropdown-item" href="sobre.html">Sobre a plataforma</a></li>
-            <li><a class="dropdown-item" href="termos.html">Termos de Uso</a></li>
-          </ul>
+        <div class="mb-5">
+          <h1 class="mb-3">Sobre a Plataforma Lattes</h1>
+          <p class="lead text-muted">Sistema oficial de currículos da comunidade científica brasileira</p>
+          <div class="d-flex gap-3 mt-4">
+            <span class="badge bg-primary px-3 py-2">
+              <i class="bi bi-calendar-check me-1"></i> Desde 1999
+            </span>
+            <span class="badge bg-primary px-3 py-2">
+              <i class="bi bi-people me-1"></i> 2.5M+ Currículos
+            </span>
+            <span class="badge bg-primary px-3 py-2">
+              <i class="bi bi-building me-1"></i> 5K+ Instituições
+            </span>
+          </div>
         </div>
 
-        <a class="nav-link px-3" href="ajuda.html">Ajuda</a>
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="p-2 mx-2">
+                <i class="bi bi-bullseye text-primary fs-4"></i>
+              </div>
+              <div>
+                <h5 class="card-title mb-2">Objetivo</h5>
+                <p class="card-text">
+                  A Plataforma Lattes é um sistema de currículos e informações científicas que permite o registro, atualização e consulta de dados de pesquisadores, instituições e suas produções acadêmicas no Brasil.
+                </p>
+                <p class="card-text mb-0">
+                  Seu principal objetivo é integrar e disponibilizar informações sobre a produção científica nacional, facilitando a avaliação de programas de pesquisa, bolsas e financiamentos.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <div class="d-flex align-items-start mb-3">
+              <div class="p-2 mx-2">
+                <i class="bi bi-clock-history text-primary fs-4"></i>
+              </div>
+              <div>
+                <h5 class="card-title mb-2">Histórico</h5>
+                <p class="card-text">
+                  Criada em 1999 pelo CNPq, a Plataforma Lattes visa centralizar informações acadêmicas, facilitando a avaliação de programas de pesquisa, bolsas e financiamentos, bem como a integração entre pesquisadores.
+                </p>
+                <div class="row mt-3">
+                  <div class="col-md-6">
+                    <h6 class="fw-bold">Principais Marcos</h6>
+                    <ul class="mb-0">
+                      <li><strong>1999</strong>: Lançamento da primeira versão</li>
+                      <li><strong>2005</strong>: Integração com CAPES</li>
+                      <li><strong>2012</strong> Nova interface e funcionalidades</li>
+                      <li><strong>2020</strong>: Sistema totalmente reformulado</li>
+                    </ul>
+                  </div>
+                  <div class="col-md-6">
+                    <h6 class="fw-bold">Reconhecimento</h6>
+                    <ul class="mb-0">
+                      <li>Referência internacional em sistemas de currículos</li>
+                      <li>Modelo adotado por outros países</li>
+                      <li>Prêmios de inovação em gestão científica</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card mb-4">
+          <div class="card-body">
+            <h5 class="card-title mb-3">
+              <i class="bi bi-gear-fill me-2"></i>
+              Funcionalidades
+            </h5>
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <div class="p-2 mx-2">
+                    <i class="bi bi-person-plus"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold">Cadastro de Currículos</h6>
+                    <p class="small text-muted mb-0">
+                      Sistema completo para registro e atualização de informações acadêmicas
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <div class="p-2 mx-2">
+                    <i class="bi bi-search"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold">Busca Avançada</h6>
+                    <p class="small text-muted mb-0">
+                      Localize pesquisadores, instituições e produções científicas
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <div class="p-2 mx-2">
+                    <i class="bi bi-bar-chart"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold">Estatísticas</h6>
+                    <p class="small text-muted mb-0">
+                      Dados e análises sobre a produção científica brasileira
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex align-items-start mb-3">
+                  <div class="p-2 mx-2">
+                    <i class="bi bi-shield-check"></i>
+                  </div>
+                  <div>
+                    <h6 class="fw-bold">Avaliação</h6>
+                    <p class="small text-muted mb-0">
+                      Suporte a programas de bolsas e financiamentos do CNPq
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row mb-4">
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <div class="text-primary mb-3">
+                  <i class="bi bi-diagram-3 fs-1"></i>
+                </div>
+                <h4 class="card-title">Estrutura</h4>
+                <p class="card-text small">
+                  Sistema integrado com universidades, institutos de pesquisa e agências de fomento em todo o Brasil
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 mb-3">
+            <div class="card h-100">
+              <div class="card-body text-center">
+                <div class="text-primary mb-3">
+                  <i class="bi bi-shield-lock fs-1"></i>
+                </div>
+                <h4 class="card-title">Segurança</h4>
+                <p class="card-text small">
+                  Dados protegidos com criptografia e seguindo as melhores práticas de segurança da informação
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card border-primary">
+          <div class="card-body">
+            <h5 class="card-title mb-3">
+              <i class="bi bi-envelope-fill me-2"></i>
+              Contato
+            </h5>
+            <div class="row">
+              <div class="col-md-6">
+                <p class="mb-3">
+                  Para dúvidas ou suporte, entre em contato com o CNPq:
+                </p>
+                <div class="mb-3">
+                  <i class="bi bi-envelope text-primary me-2"></i>
+                  <strong>E-mail:</strong>
+                  <a href="#" class="d-block mt-1">atendimento@cnpq.br</a>
+                </div>
+                <div class="mb-3">
+                  <i class="bi bi-telephone text-primary me-2"></i>
+                  <strong>Telefone:</strong>
+                  <span class="d-block mt-1">(61) 3211-4000</span>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="mb-3">
+                  <i class="bi bi-clock text-primary me-2"></i>
+                  <strong>Horário de atendimento:</strong>
+                  <span class="d-block mt-1">Segunda a sexta, das 8h às 18h</span>
+                </div>
+                <div class="mb-3">
+                  <i class="bi bi-geo-alt text-primary me-2"></i>
+                  <strong>Endereço:</strong>
+                  <span class="d-block mt-1">
+                    Setor de Autarquias Sul, Quadra 1, Bloco B<br>
+                    Brasília - DF, CEP: 70070-010
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
       </div>
     </div>
-  </div>
+  </main>
 
-  <main class="container min-vh-100 d-flex justify-content-center align-items-start py-5">
-    <div class="w-100" style="max-width: 80%">
-      <h2 class="mb-4">Sobre a Plataforma Lattes</h2>
+  <div id="footer"></div>
 
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Objetivo</h5>
-    <p>A Plataforma Lattes é um sistema de currículos e informações científicas que permite o registro, atualização e consulta de dados de pesquisadores, instituições e suas produções acadêmicas no Brasil.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Histórico</h5>
-    <p>Criada em 1999 pelo CNPq, a Plataforma Lattes visa centralizar informações acadêmicas, facilitando a avaliação de programas de pesquisa, bolsas e financiamentos, bem como a integração entre pesquisadores.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Funcionalidades</h5>
-    <ul>
-      <li>Cadastro e atualização de currículos</li>
-      <li>Consulta e pesquisa de pesquisadores e instituições</li>
-      <li>Visualização de dados estatísticos e relatórios</li>
-      <li>Integração com programas de bolsas e financiamentos do CNPq</li>
-      <li>Suporte a avaliação e acompanhamento da produção acadêmica</li>
-    </ul>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Contato</h5>
-    <p>Para dúvidas ou suporte, entre em contato com o CNPq pelo e-mail atendimento@cnpq.br ou pelo telefone (61) 3211-4000.</p>
-  </div>
-    </div>
-  </main>  
-
-  <footer class="border-top mt-5">
-    <div class="container py-4 text-center text-md-start">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <h6 class="fw-bold text-black">Plataforma Lattes</h6>
-          <p class="small">© 2025 CNPq. Todos os direitos reservados.</p>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <h6 class="fw-bold text-black">Links úteis</h6>
-          <ul class="list-unstyled">
-            <li><a href="ajuda.html" class="text-white">Ajuda</a></li>
-            <li><a href="sobre.html" class="text-white">Política de privacidade</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <h6 class="fw-bold text-black">Contato</h6>
-          <p class="mb-0 small">
-            atendimento@cnpq.br<br>
-            Tel: (61) 3211-4000
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <script src="assets/js/component-loader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

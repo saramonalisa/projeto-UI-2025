@@ -6,248 +6,275 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Plataforma Lattes</title>
+  <title>Plataforma Lattes - CNPq</title>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="#">
-        <img src="assets/logo.svg" alt="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item"><a class="nav-link" href="login.html">Entrar</a></li>
-          <li class="nav-item"><a class="nav-link" href="cadastro.html">Cadastrar-se</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <div id="header"></div>
+  <div id="navbar"></div>
 
-  <div class="nav-bottom border-bottom">
+  <section class="hero-section">
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-center py-2">
-        <a class="nav-link px-3" href="abacv.html">Currículos</a>
-        <a class="nav-link px-3" href="abainst.html">Instituições</a>
-        <a class="nav-link px-3" href="estatisticas.html">Dados e estatísticas</a>
-
-        <div class="dropdown">
-          <a class="nav-link px-3 dropdown-toggle" href="#" data-bs-toggle="dropdown">Sobre</a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="sobre.html">Sobre a plataforma</a></li>
-            <li><a class="dropdown-item" href="termos.html">Termos de Uso</a></li>
-          </ul>
-        </div>
-
-        <a class="nav-link px-3" href="ajuda.html">Ajuda</a>
-      </div>
-    </div>
-  </div>
-
-  <main class="container min-vh-100 d-flex justify-content-center align-items-start py-5">
-    <div class="w-100" style="max-width: 80%">
-
-      <h3 class="text-center mb-4">Bem-vindo à Plataforma Lattes!</h3>
-      <p class="text-center mb-4 text-secondary">Busque currículo ou instituição na base de dados</p>
-
-      <div class="row justify-content-center">
-        <div class="col-md-8 col-lg-6">
-
-          <form id="formBusca" class="input-group mb-3" role="search">
-            <input id="campoBusca" type="search" class="form-control" placeholder="Nome da pessoa ou instituição…">
-            <button class="btn btn-outline-secondary" type="submit">
-              <i class="bi bi-search"></i>
-            </button>
-
-            <div class="text-center mx-3">
-            <button class="btn btn-primary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-              Filtros
-            </button>
-            <ul class="dropdown-menu w-70">
-              <li><a class="dropdown-item" href="#">Doutores</a></li>
-              <li><a class="dropdown-item" href="#">Demais pesquisadores (Mestres, Graduados, Estudantes, Técnicos, etc.)</a></li>
-            </ul>
+      <div class="text-center my-1">
+        <div class="search-container">
+      <div class="search-box">
+        <h3 class="text-center mb-4">Buscar Currículos e Instituições</h3>
+        <p class="text-center text-muted mb-4">Encontre pesquisadores, instituições e grupos de pesquisa</p>
+        
+        <div class="search-input-group">
+          <i class="bi bi-search search-icon"></i>
+          <input type="search" 
+                 id="campoBusca" 
+                 class="form-control search-input" 
+                 placeholder="Digite nome, instituição, área do conhecimento...">
+          <button class="btn search-btn" type="button" id="btnBuscar">
+            <i class="bi bi-search me-1"></i> Buscar
+          </button>
+          <button class="btn btn-outline-primary filter-btn" type="button" data-bs-toggle="dropdown">
+            <i class="bi bi-funnel me-1"></i> Filtros
+          </button>
+          <div class="dropdown-menu filter-dropdown">
+            <h6 class="dropdown-header">Filtrar por:</h6>
+            <div class="filter-item">
+              <input class="form-check-input me-2" type="checkbox" id="filtroDoutores">
+              <label class="form-check-label" for="filtroDoutores">Doutores</label>
+            </div>
+            <div class="filter-item">
+              <input class="form-check-input me-2" type="checkbox" id="filtroMestres">
+              <label class="form-check-label" for="filtroMestres">Mestres</label>
+            </div>
+            <div class="filter-item">
+              <input class="form-check-input me-2" type="checkbox" id="filtroGraduados">
+              <label class="form-check-label" for="filtroGraduados">Graduados</label>
+            </div>
+            <div class="dropdown-divider"></div>
+            <h6 class="dropdown-header">Área do Conhecimento</h6>
+            <select class="form-select form-select-sm">
+              <option>Todas as áreas</option>
+              <option>Ciências Exatas e da Terra</option>
+              <option>Ciências Biológicas</option>
+              <option>Engenharias</option>
+              <option>Ciências da Saúde</option>
+              <option>Ciências Agrárias</option>
+              <option>Ciências Sociais Aplicadas</option>
+              <option>Ciências Humanas</option>
+              <option>Linguística, Letras e Artes</option>
+            </select>
           </div>
-          </form>
-
-          <div id="resultadoBusca" class="mt-4"></div>
-
+        </div>
+        
+        <div class="text-center mt-3">
+          <small class="text-muted">
+            <i class="bi bi-lightbulb me-1"></i>
+            Dica: Use termos específicos para melhores resultados
+          </small>
         </div>
       </div>
     </div>
+      </div>
+    </div>
+  </section>
+
+  <main class="container">
+    <div id="resultadoBusca" class="mt-3">
+      <div class="text-center">
+        <div class="no-results" id="initialMessage">
+          <i class="bi bi-search"></i>
+          <h4 class="mb-3">Realize uma busca</h4>
+          <p class="text-muted">Digite um termo na caixa de busca acima para encontrar currículos e instituições</p>
+        </div>
+        <div class="loading-spinner" id="loadingSpinner"></div>
+      </div>
+    </div>
+
   </main>
 
-  <footer class="border-top mt-5">
-    <div class="container py-4 text-center text-md-start">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <h6 class="fw-bold text-black">Plataforma Lattes</h6>
-          <p class="small">© 2025 CNPq. Todos os direitos reservados.</p>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <h6 class="fw-bold text-black">Links úteis</h6>
-          <ul class="list-unstyled">
-            <li><a href="ajuda.html" class="text-white">Ajuda</a></li>
-            <li><a href="sobre.html" class="text-white">Política de privacidade</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <h6 class="fw-bold text-black">Contato</h6>
-          <p class="mb-0 small">
-            atendimento@cnpq.br<br>
-            Tel: (61) 3211-4000
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
+  <div id="footer"></div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
   <script>
-document.getElementById("formBusca").addEventListener("submit", function(e){
-  e.preventDefault();
+    document.addEventListener('DOMContentLoaded', function() {
+      const btnBuscar = document.getElementById('btnBuscar');
+      const campoBusca = document.getElementById('campoBusca');
+      const resultadoDiv = document.getElementById('resultadoBusca');
+      const loadingSpinner = document.getElementById('loadingSpinner');
+      const initialMessage = document.getElementById('initialMessage');
+      const destaques = document.getElementById('destaques');
 
-  let termo = document.getElementById("campoBusca").value.trim();
-  let resultadoDiv = document.getElementById("resultadoBusca");
+      const dadosSimulados = [
+        {
+          id: "L1234567",
+          nome: "Prof. Dr. Carlos Alberto Silva",
+          inst: "USP - Universidade de São Paulo",
+          area: "Ciência da Computação, Inteligência Artificial",
+          desc: "Professor Titular do Departamento de Ciência da Computação. Pesquisador em Machine Learning com mais de 150 artigos publicados em periódicos internacionais. Coordenador do Laboratório de Inteligência Computacional.",
+          foto: "https://randomuser.me/api/portraits/men/32.jpg"
+        },
+        {
+          id: "L2345678",
+          nome: "Dra. Maria Fernanda Santos",
+          inst: "Unicamp - Universidade Estadual de Campinas",
+          area: "Biomedicina, Genética Molecular",
+          desc: "Pesquisadora em genética molecular e terapia celular. Desenvolve pesquisas com células-tronco para tratamento de doenças degenerativas. Possui 5 patentes registradas.",
+          foto: "https://randomuser.me/api/portraits/women/44.jpg"
+        },
+        {
+          id: "L3456789",
+          nome: "Prof. Dr. Roberto Lima Alves",
+          inst: "UFMG - Universidade Federal de Minas Gerais",
+          area: "Engenharia Civil, Materiais de Construção",
+          desc: "Especialista em materiais de construção sustentáveis. Desenvolveu novos compostos cimentícios com redução de 40% na emissão de CO2. Coordena projeto internacional com 8 países.",
+          foto: "https://randomuser.me/api/portraits/men/65.jpg"
+        }
+      ];
 
-  if(termo === ""){
-    resultadoDiv.innerHTML = `<p class="text-danger">Digite algo para buscar.</p>`;
-    return;
-  }
-
-  // ✅ Carrega JSON
-  fetch("data/resultados.json")
-    .then(resp => resp.json())
-    .then(data => {
-      // Filtra os resultados pelo termo digitado (nome ou instituição)
-      const resultados = data.filter(r =>
-        r.nome.toLowerCase().includes(termo.toLowerCase()) ||
-        r.inst.toLowerCase().includes(termo.toLowerCase())
-      );
-
-      if(resultados.length === 0){
-        resultadoDiv.innerHTML = `<p class="text-muted">Nenhum resultado encontrado.</p>`;
-        return;
-      }
-
-      // CONTROLE DE PAGINAÇÃO
-      const itensPorPagina = 3;
-      let paginaAtual = 1;
-
-      function montarPagina() {
-        resultadoDiv.innerHTML = `
-          <p class="mb-3 text-secondary">Resultados encontrados</p>
-          <div class="accordion" id="accordionResultados"></div>
-          <div id="paginacao" class="mt-3 d-flex justify-content-center"></div>
-        `;
-
-        let inicio = (paginaAtual - 1) * itensPorPagina;
-        let fim = inicio + itensPorPagina;
-        let pagina = resultados.slice(inicio, fim);
-
-        const acc = document.getElementById("accordionResultados");
-
-        pagina.forEach((r, i) => {
-          let itemId = "item" + (inicio + i);
-          let collapseId = "collapse" + (inicio + i);
-
-          acc.innerHTML += `
-            <div class="accordion-item card-hover mb-3">
-              <h2 class="accordion-header" id="${itemId}">
-                <button class="accordion-button collapsed" type="button"
-                  data-bs-toggle="collapse" data-bs-target="#${collapseId}">
-                  <div class="d-flex align-items-center w-100">
-                    <img src="https://via.placeholder.com/70x70.png?text=Foto" class="profile-thumb me-3">
-                    <div class="flex-grow-1 text-start">
-                      <h6 class="mb-1">${r.nome}</h6>
-                      <div class="small text-muted">${r.inst}</div>
-                      <div class="small">Áreas: ${r.area}</div>
-                    </div>
-                    <div class="col-auto text-muted small">ID Lattes: ${r.id}</div>
-                  </div>
-                </button>
-              </h2>
-              <div id="${collapseId}" class="accordion-collapse collapse" data-bs-parent="#accordionResultados">
-                <div class="accordion-body">
-                  <p>${r.desc}</p>
-                  <a href="#" class="btn btn-primary btn-sm">Ver currículo completo</a>
-                </div>
-              </div>
+      function realizarBusca() {
+        const termo = campoBusca.value.trim();
+        
+        if (termo === "") {
+          resultadoDiv.innerHTML = `
+            <div class="no-results">
+              <i class="bi bi-exclamation-circle"></i>
+              <h4 class="mb-3">Digite um termo para buscar</h4>
+              <p class="text-muted">Por favor, insira um nome, instituição ou área do conhecimento</p>
             </div>
           `;
-        });
-
-        montarPaginacao();
-      }
-
-      function montarPaginacao() {
-        const totalPaginas = Math.ceil(resultados.length / itensPorPagina);
-        const pagDiv = document.getElementById("paginacao");
-
-        let html = `
-          <nav>
-            <ul class="pagination">
-              <li class="page-item ${paginaAtual === 1 ? "disabled" : ""}">
-                <a class="page-link" href="#" id="btnPrev">&laquo;</a>
-              </li>
-        `;
-
-        for(let i = 1; i <= totalPaginas; i++){
-          html += `
-            <li class="page-item ${i === paginaAtual ? "active" : ""}">
-              <a class="page-link pag-btn" href="#" data-pag="${i}">${i}</a>
-            </li>
-          `;
+          return;
         }
 
-        html += `
-              <li class="page-item ${paginaAtual === totalPaginas ? "disabled" : ""}">
-                <a class="page-link" href="#" id="btnNext">&raquo;</a>
-              </li>
-            </ul>
-          </nav>
-        `;
+        initialMessage.style.display = 'none';
+        loadingSpinner.style.display = 'block';
+        destaques.style.display = 'none';
 
-        pagDiv.innerHTML = html;
+        setTimeout(() => {
+          const resultados = dadosSimulados.filter(r =>
+            r.nome.toLowerCase().includes(termo.toLowerCase()) ||
+            r.inst.toLowerCase().includes(termo.toLowerCase()) ||
+            r.area.toLowerCase().includes(termo.toLowerCase())
+          );
 
-        document.querySelectorAll(".pag-btn").forEach(btn => {
-          btn.addEventListener("click", () => {
-            paginaAtual = parseInt(btn.dataset.pag);
-            montarPagina();
+          loadingSpinner.style.display = 'none';
+
+          if (resultados.length === 0) {
+            resultadoDiv.innerHTML = `
+              <div class="no-results">
+                <i class="bi bi-search"></i>
+                <h4 class="mb-3">Nenhum resultado encontrado</h4>
+                <p class="text-muted">Tente usar termos diferentes ou verificar a ortografia</p>
+                <button class="btn btn-outline-primary mt-3" onclick="limparBusca()">Nova Busca</button>
+              </div>
+            `;
+            return;
+          }
+
+          let html = `
+            <div class="mb-4">
+              <span class="result-count">${resultados.length} resultado(s) encontrado(s)</span>
+              <p class="text-muted">Termo buscado: <strong>"${termo}"</strong></p>
+            </div>
+          `;
+
+          resultados.forEach((r, index) => {
+            html += `
+              <div class="result-card">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-md-2 text-center">
+                      <img src="${r.foto}" class="profile-img mb-3">
+                    </div>
+                    <div class="col-md-8">
+                      <h5 class="card-title">${r.nome}</h5>
+                      <p class="text-muted mb-2">
+                        <i class="bi bi-building me-1"></i>${r.inst}
+                      </p>
+                      <p class="mb-2">
+                        <span class="badge badge-area">${r.area.split(',')[0]}</span>
+                        ${r.area.split(',').slice(1).map(a => `<span class="badge bg-light text-dark">${a.trim()}</span>`).join(' ')}
+                      </p>
+                      <p class="small text-muted mb-3">${r.desc}</p>
+                      <div class="d-flex justify-content-between align-items-center">
+                        <small class="text-muted">
+                          <i class="bi bi-card-text me-1"></i>ID Lattes: ${r.id}
+                        </small>
+                        <div>
+                          <a href="#" class="btn btn-primary btn-sm me-2">
+                            <i class="bi bi-eye me-1"></i> Ver Currículo
+                          </a>
+                          <a href="#" class="btn btn-outline-primary btn-sm">
+                            <i class="bi bi-download me-1"></i> PDF
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-2 text-md-end">
+                      <button class="btn btn-link text-muted" onclick="adicionarFavorito('${r.id}')">
+                        <i class="bi bi-star"></i> Favoritar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            `;
           });
-        });
 
-        document.getElementById("btnPrev").onclick = () => {
-          if(paginaAtual > 1){
-            paginaAtual--;
-            montarPagina();
+          if (resultados.length > 3) {
+            html += `
+              <nav aria-label="Navegação de resultados" class="mt-4">
+                <ul class="pagination justify-content-center">
+                  <li class="page-item disabled">
+                    <a class="page-link" href="#" tabindex="-1">Anterior</a>
+                  </li>
+                  <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                  <li class="page-item"><a class="page-link" href="#">2</a></li>
+                  <li class="page-item"><a class="page-link" href="#">3</a></li>
+                  <li class="page-item">
+                    <a class="page-link" href="#">Próxima</a>
+                  </li>
+                </ul>
+              </nav>
+            `;
           }
-        };
 
-        document.getElementById("btnNext").onclick = () => {
-          if(paginaAtual < totalPaginas){
-            paginaAtual++;
-            montarPagina();
-          }
-        };
+          resultadoDiv.innerHTML = html;
+        }, 800);
       }
 
-      montarPagina();
+      btnBuscar.addEventListener('click', realizarBusca);
+      campoBusca.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+          e.preventDefault();
+          realizarBusca();
+        }
+      });
 
-    })
-    .catch(err => {
-      resultadoDiv.innerHTML = `<p class="text-danger">Erro ao carregar resultados.</p>`;
-      console.error(err);
+      window.limparBusca = function() {
+        campoBusca.value = '';
+        initialMessage.style.display = 'block';
+        loadingSpinner.style.display = 'none';
+        destaques.style.display = 'flex';
+        resultadoDiv.innerHTML = '';
+      };
+
+      window.adicionarFavorito = function(id) {
+        alert(`Currículo ${id} adicionado aos favoritos!`);
+      };
+
+      const sugestoes = [
+        "Inteligência Artificial",
+        "Biomedicina",
+        "Engenharia Civil",
+        "USP",
+        "Unicamp",
+        "Genética",
+        "Sustentabilidade"
+      ];
+
+      campoBusca.placeholder = `Ex: ${sugestoes[Math.floor(Math.random() * sugestoes.length)]}...`;
     });
-});
-</script>
-
+  </script>
+  <script src="assets/js/component-loader.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 </html>

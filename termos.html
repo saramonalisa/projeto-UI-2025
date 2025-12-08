@@ -6,117 +6,181 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
-  <title>Plataforma Lattes - Termos de Uso</title>
+  <title>Termos de Uso - Plataforma Lattes</title>
 </head>
 <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-    <div class="container-fluid">
-      <a class="navbar-brand fw-bold" href="index.html">
-        <img src="assets/logo.svg" alt="logo">
-      </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop" aria-controls="navbarTop" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
-        <ul class="navbar-nav mb-2 mb-lg-0">
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Entrar</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="cadastro.html">Cadastrar-se</a>
-          </li>
-        </ul>
+  <div id="header-logged"></div>
+
+  <div id="navbar"></div>
+
+  <main class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-10 col-xl-8">
+        
+        <div class="mb-5">
+          <h1 class="mb-3">Termos de Uso</h1>
+          <p class="lead text-muted">Última atualização: 15 de março de 2025</p>
+          <div class="border-start border-3 border-primary ps-3 mt-4">
+            <p class="mb-0">
+              Ao acessar e utilizar a Plataforma Lattes, você concorda com os termos e condições descritos neste documento.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion" id="termosAccordion">
+          
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#termo1">
+                <i class="bi bi-check-circle me-3"></i>
+                Aceitação dos Termos
+              </button>
+            </h2>
+            <div id="termo1" class="accordion-collapse collapse show" data-bs-parent="#termosAccordion">
+              <div class="accordion-body">
+                <p>Ao acessar e utilizar a Plataforma Lattes, o usuário concorda com os termos e condições descritos neste documento, bem como com as políticas de privacidade e uso de dados do CNPq.</p>
+                <p class="mb-0">O uso contínuo da plataforma implica na aceitação das modificações que venham a ser realizadas nos termos de uso.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#termo2">
+                <i class="bi bi-laptop me-3"></i>
+                Uso da Plataforma
+              </button>
+            </h2>
+            <div id="termo2" class="accordion-collapse collapse" data-bs-parent="#termosAccordion">
+              <div class="accordion-body">
+                <p>O usuário se compromete a utilizar a plataforma apenas para fins legítimos relacionados à pesquisa, ensino e atividades acadêmicas, respeitando a legislação vigente.</p>
+                <p>É expressamente proibido:</p>
+                <ul>
+                  <li>Utilizar a plataforma para atividades ilícitas</li>
+                  <li>Acessar informações de terceiros sem autorização</li>
+                  <li>Realizar ataques ou tentativas de comprometimento da segurança</li>
+                  <li>Publicar conteúdo ofensivo ou discriminatório</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#termo3">
+                <i class="bi bi-shield-lock me-3"></i>
+                Cadastro e Segurança
+              </button>
+            </h2>
+            <div id="termo3" class="accordion-collapse collapse" data-bs-parent="#termosAccordion">
+              <div class="accordion-body">
+                <p>É responsabilidade do usuário manter a confidencialidade de seus dados de acesso. O compartilhamento de senhas ou uso indevido é estritamente proibido.</p>
+                <p>O CNPq se reserva o direito de suspender ou cancelar contas em caso de:</p>
+                <ul>
+                  <li>Violação dos termos de uso</li>
+                  <li>Tentativas de acesso não autorizado</li>
+                  <li>Atividades fraudulentas</li>
+                  <li>Uso indevido dos dados da plataforma</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#termo4">
+                <i class="bi bi-c-circle me-3"></i>
+                Propriedade Intelectual
+              </button>
+            </h2>
+            <div id="termo4" class="accordion-collapse collapse" data-bs-parent="#termosAccordion">
+              <div class="accordion-body">
+                <p>Todo o conteúdo disponível na plataforma, incluindo currículos, artigos e projetos, permanece sob propriedade intelectual de seus autores e da instituição, devendo ser citado corretamente.</p>
+                <p>A infraestrutura, design e software da Plataforma Lattes são de propriedade do CNPq e protegidos pelas leis de propriedade intelectual.</p>
+                <p class="mb-0">O uso dos dados deve sempre respeitar a atribuição de autoria e as licenças aplicáveis a cada conteúdo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item mb-3">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#termo5">
+                <i class="bi bi-clock-history me-3"></i>
+                Alterações nos Termos
+              </button>
+            </h2>
+            <div id="termo5" class="accordion-collapse collapse" data-bs-parent="#termosAccordion">
+              <div class="accordion-body">
+                <p>O CNPq reserva-se o direito de alterar estes termos a qualquer momento. É responsabilidade do usuário verificar periodicamente atualizações.</p>
+                <p>Alterações significativas serão comunicadas através:</p>
+                <ul>
+                  <li>Notificação na plataforma</li>
+                  <li>Comunicação por e-mail (para usuários cadastrados)</li>
+                  <li>Aviso no portal do CNPq</li>
+                </ul>
+                <p class="mb-0">O uso continuado da plataforma após alterações implica na aceitação dos novos termos.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#termo6">
+                <i class="bi bi-envelope me-3"></i>
+                Contato
+              </button>
+            </h2>
+            <div id="termo6" class="accordion-collapse collapse" data-bs-parent="#termosAccordion">
+              <div class="accordion-body">
+                <p>Para dúvidas ou informações adicionais sobre os termos de uso, entre em contato:</p>
+                <div class="row">
+                  <div class="col-md-6">
+                    <p class="mb-2">
+                      <i class="bi bi-envelope me-2"></i>
+                      <strong>E-mail:</strong><br>
+                      <a href="#">atendimento@cnpq.br</a>
+                    </p>
+                  </div>
+                  <div class="col-md-6">
+                    <p class="mb-2">
+                      <i class="bi bi-telephone me-2"></i>
+                      <strong>Telefone:</strong><br>
+                      (61) 3211-4000
+                    </p>
+                  </div>
+                </div>
+                <p class="mb-0 mt-3">
+                  <i class="bi bi-clock me-2"></i>
+                  <strong>Horário de atendimento:</strong> Segunda a sexta, das 8h às 18h.
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card mt-5 border-primary">
+          <div class="card-body text-center">
+            <div class="mb-3">
+              <i class="bi bi-file-text fs-1 text-primary"></i>
+            </div>
+            <h5 class="card-title mb-3">Declaração de Aceitação</h5>
+            <p class="card-text mb-4">Ao utilizar a Plataforma Lattes, você declara que leu, compreendeu e aceitou todos os termos e condições aqui descritos.</p>
+            <a href="index.html" class="btn btn-primary px-4">
+              <i class="bi bi-house-door me-2"></i>
+              Voltar para a Página Inicial
+            </a>
+          </div>
+        </div>
+
       </div>
     </div>
-  </nav>
+  </main>
 
-  <div class="nav-bottom border-bottom">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-center py-2">
-        <a class="nav-link px-3" href="abacv.html">Currículos</a>
-        <a class="nav-link px-3" href="abainst.html">Instituições</a>
-        <a class="nav-link px-3" href="estatisticas.html">Dados e estatísticas</a>
-
-        <div class="dropdown">
-          <a class="nav-link px-3 dropdown-toggle" href="#" id="sobreDropdown" data-bs-toggle="dropdown" aria-expanded="false">
-            Sobre
-          </a>
-          <ul class="dropdown-menu" aria-labelledby="sobreDropdown">
-            <li><a class="dropdown-item" href="sobre.html">Sobre a plataforma</a></li>
-            <li><a class="dropdown-item" href="termos.html">Termos de Uso</a></li>
-          </ul>
-        </div>
-
-        <a class="nav-link px-3" href="ajuda.html">Ajuda</a>
-
-      </div>
-    </div>
-  </div>
-
-  <main class="container min-vh-100 d-flex justify-content-center align-items-start py-5">
-    <div class="w-100" style="max-width: 80%">
-      <h2 class="mb-4">Termos de Uso — Plataforma Lattes</h2>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Aceitação dos Termos</h5>
-    <p>Ao acessar e utilizar a Plataforma Lattes, o usuário concorda com os termos e condições descritos neste documento, bem como com as políticas de privacidade e uso de dados do CNPq.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Uso da Plataforma</h5>
-    <p>O usuário se compromete a utilizar a plataforma apenas para fins legítimos relacionados à pesquisa, ensino e atividades acadêmicas, respeitando a legislação vigente.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Cadastro e Segurança</h5>
-    <p>É responsabilidade do usuário manter a confidencialidade de seus dados de acesso. O compartilhamento de senhas ou uso indevido é estritamente proibido.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Propriedade Intelectual</h5>
-    <p>Todo o conteúdo disponível na plataforma, incluindo currículos, artigos e projetos, permanece sob propriedade intelectual de seus autores e da instituição, devendo ser citado corretamente.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Alterações nos Termos</h5>
-    <p>O CNPq reserva-se o direito de alterar estes termos a qualquer momento. É responsabilidade do usuário verificar periodicamente atualizações.</p>
-  </div>
-
-  <div class="card p-4 mb-3">
-    <h5 class="section-title">Contato</h5>
-    <p>Para dúvidas ou informações adicionais sobre os termos de uso, entre em contato com suporte@plataformalattes.br.</p>
-  </div>
-    </div>
-  </main>  
-
-  <footer class="border-top mt-5">
-    <div class="container py-4 text-center text-md-start">
-      <div class="row">
-        <div class="col-md-6 mb-3">
-          <h6 class="fw-bold text-black">Plataforma Lattes</h6>
-          <p class="small">© 2025 CNPq. Todos os direitos reservados.</p>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <h6 class="fw-bold text-black">Links úteis</h6>
-          <ul class="list-unstyled">
-            <li><a href="ajuda.html" class="text-white">Ajuda</a></li>
-            <li><a href="sobre.html" class="text-white">Política de privacidade</a></li>
-          </ul>
-        </div>
-
-        <div class="col-md-3 mb-3">
-          <h6 class="fw-bold text-black">Contato</h6>
-          <p class="mb-0 small">
-            atendimento@cnpq.br<br>
-            Tel: (61) 3211-4000
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
+  <div id="footer"></div>
+  
+  <script src="assets/js/component-loader.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
