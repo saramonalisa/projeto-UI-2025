@@ -596,8 +596,12 @@ footer {
   margin-bottom: 0;
 }
 
+.quick-links li a {
+  font-weight: 400 !important;
+  color: #ffffff !important;
+}
+
 /* STEP BOXES / PROGRESSO */
-/* Progress Container Estilizado */
 .progress-container {
   padding: 20px 0;
   margin-bottom: 40px;
@@ -608,7 +612,6 @@ footer {
   position: relative;
 }
 
-/* Linha de progresso */
 .progress-line {
   position: absolute;
   top: 40px;
@@ -623,7 +626,6 @@ footer {
   border-radius: 2px;
 }
 
-/* Step Box Moderno */
 .step-box {
   display: flex;
   flex-direction: column;
@@ -652,7 +654,6 @@ footer {
   background-clip: text;
 }
 
-/* Step Ativo (já completado) */
 .step-box.step-active {
   background: linear-gradient(135deg, var(--azul-claro) 0%, var(--azul-escuro) 100%);
   color: white;
@@ -670,7 +671,6 @@ footer {
   font-weight: 600;
 }
 
-/* Step Atual */
 .step-box.current-step {
   background: white;
   border: 2px solid var(--azul-escuro);
@@ -689,44 +689,185 @@ footer {
   transform: scale(1.1);
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 992px) {
   .progress-container {
-    gap: 6px;
-    padding: 15px 0;
+    padding: 15px 0 !important;
+  }
+  
+  .progress-line {
+    width: 90% !important;
+    top: 35px !important;
   }
   
   .step-box {
-    width: 70px;
-    padding: 12px 8px;
+    width: 45px !important;
+    height: 45px !important;
   }
   
   .step-box i {
-    font-size: 1.5rem;
+    font-size: 1.25rem !important;
   }
   
-  .step-box .text-center {
-    font-size: 0.7rem;
+  .progress-container .text-center.small {
+    font-size: 0.7rem !important;
+    max-width: 85px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .progress-container {
+    padding: 12px 0 !important;
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .progress-line {
+    width: 95% !important;
+    top: 30px !important;
+    height: 2px !important;
+  }
+  
+  .progress-container .d-flex.flex-column {
+    margin: 0 3px !important;
+  }
+  
+  .step-box {
+    width: 38px !important;
+    height: 38px !important;
+  }
+  
+  .step-box i {
+    font-size: 1rem !important;
+  }
+  
+  .progress-container .text-center.small {
+    font-size: 0.65rem !important;
+    max-width: 75px !important;
+    margin-top: 6px !important;
   }
 }
 
 @media (max-width: 576px) {
+  .progress-container {
+    padding: 8px 0 !important;
+    margin-bottom: 0.5rem !important;
+  }
+  
+  .progress-line {
+    top: 25px !important;
+    height: 1.5px !important;
+  }
+  
+  .progress-container .d-flex.flex-column {
+    margin: 0 1px !important;
+  }
+  
   .step-box {
-    width: 60px;
-    padding: 10px 6px;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 8px !important;
   }
   
   .step-box i {
-    font-size: 1.3rem;
+    font-size: 0.85rem !important;
   }
   
-  .step-box .text-center {
-    display: none; /* Esconde texto em telas muito pequenas */
+  .progress-container .text-center.small {
+    font-size: 0.6rem !important;
+    max-width: 65px !important;
+    margin-top: 4px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .progress-container {
+    padding: 6px 0 !important;
   }
   
-  .step-box.current-step .text-center {
-    display: block;
-    font-size: 0.65rem;
+  .progress-line {
+    top: 22px !important;
+  }
+  
+  .step-box {
+    width: 28px !important;
+    height: 28px !important;
+    border-radius: 6px !important;
+  }
+  
+  .step-box i {
+    font-size: 0.75rem !important;
+  }
+  
+  .progress-container .text-center.small {
+    font-size: 0.55rem !important;
+    max-width: 55px !important;
+    margin-top: 3px !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .progress-container .text-center.small {
+    font-size: 0.5rem !important;
+    max-width: 48px !important;
+  }
+  
+  .step-box {
+    width: 26px !important;
+    height: 26px !important;
+  }
+  
+  .step-box i {
+    font-size: 0.7rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .progress-container {
+    padding: 25px 0 !important;
+  }
+  
+  .progress-line {
+    width: 85% !important;
+    top: 45px !important;
+  }
+  
+  .progress-container .d-flex.flex-column {
+    margin: 0 10px !important;
+  }
+  
+  .step-box {
+    width: 55px !important;
+    height: 55px !important;
+  }
+  
+  .step-box i {
+    font-size: 1.5rem !important;
+  }
+  
+  .progress-container .text-center.small {
+    font-size: 0.8rem !important;
+    max-width: 100px !important;
+    margin-top: 10px !important;
+  }
+}
+
+@media (min-width: 1400px) {
+  .progress-line {
+    width: 80% !important;
+    top: 50px !important;
+  }
+  
+  .step-box {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .step-box i {
+    font-size: 1.6rem !important;
+  }
+  
+  .progress-container .text-center.small {
+    font-size: 0.85rem !important;
+    max-width: 110px !important;
   }
 }
 
