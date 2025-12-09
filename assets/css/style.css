@@ -360,7 +360,7 @@ header img {
 /* PROFILE IMAGES */
 .profile-photo {
   width: 140px;
-  height: 140px;
+  height: 190px;
   object-fit: cover;
   border-radius: 6px;
   border: 3px solid #fff;
@@ -522,7 +522,6 @@ textarea {
   padding: 12px 15px;
   border: 1px solid rgba(65, 64, 148, 0.2);
   border-radius: 8px;
-  background: linear-gradient(135deg, rgba(140, 177, 213, 0.1) 0%, rgba(65, 64, 148, 0.05) 100%);
   transition: var(--transition);
   font-family: "Poppins", sans-serif;
   font-size: 1rem;

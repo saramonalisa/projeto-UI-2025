@@ -11,10 +11,32 @@
 </head>
 <body>
 
-  <div id="header"></div>
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="#">
+            <img src="assets/logo.svg" alt="Lattes Logo" style="width: 105px; height: 60px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTop">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTop">
+            <div class="d-flex gap-2">
+                <a class="btn btn-outline-primary flex-fill text-nowrap" href="login.html">
+                    <i class="bi bi-box-arrow-in-right me-1"></i> Entrar
+                </a>
+                <a class="btn btn-primary flex-fill text-nowrap" href="cadastro.html">
+                    <i class="bi bi-person-plus me-1"></i> Cadastrar-se
+                </a>
+            </div>
+        </div>
+    </div>
+  </nav>
 
   <main class="container py-5">
     <div class="row justify-content-center">
+      <a class="nav-link px-4" href="javascript:void(0);" onclick="history.back(); return false;">
+        <i class="bi bi-arrow-left me-2"></i>Voltar
+      </a>
       <div class="col-lg-10 col-xl-8">
         
         <div class="text-center mb-2">
@@ -68,7 +90,7 @@
 
         <div class="card border-0 shadow">
           <div class="card-body p-4 p-md-5">
-            <form id="cadastroForm" action="home.html" method="get" novalidate>
+            <form id="cadastroForm" action="index.html" method="get" novalidate>
               
               <div class="form-section" id="step-0">
                 <div class="mb-4">
@@ -440,78 +462,8 @@
   <div id="footer"></div>
 
   <script src="assets/js/component-loader.js"></script>
+  <script src="assets/js/cadastro.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const paisSelect = document.getElementById('paisNacionalidade');
-    let countriesData = [];
-    if (paisSelect) {
-      fetch('data/paises.json')
-        .then(res => res.json())
-        .then(json => {
-          countriesData = Array.isArray(json.countries) ? json.countries : [];
-          const defaultCode = json.default || 'BR';
-          countriesData.forEach(c => {
-            const opt = document.createElement('option');
-            opt.value = c.code;
-            opt.textContent = c.name;
-            paisSelect.appendChild(opt);
-          });
-
-          const defaultOption = Array.from(paisSelect.options).find(o => o.value === defaultCode);
-          if (defaultOption) defaultOption.selected = true;
-
-          try {
-            new TomSelect('#paisNacionalidade', {
-              create: false,
-              sortField: { field: 'text', direction: 'asc' },
-              placeholder: 'Selecione ou pesquise...'
-            });
-          } catch (e) {
-            console.warn('Tom Select não pôde ser inicializado:', e);
-          }
-        })
-        .catch(err => {
-          console.error('Erro ao carregar data/paises.json', err);
-          const opt = document.createElement('option');
-          opt.value = 'BR';
-          opt.textContent = 'Brasil';
-          paisSelect.appendChild(opt);
-          opt.selected = true;
-        });
-    }
-    let currentStep = 0;
-    const steps = document.querySelectorAll('.form-section');
-    const boxes = document.querySelectorAll('.step-box');
-    const totalSteps = steps.length;
-
-    function updateSteps() {
-      steps.forEach((el, i) => {
-        el.style.display = (i === currentStep) ? 'block' : 'none';
-      });
-      boxes.forEach((b, i) => {
-        b.classList.toggle('step-active', i < currentStep);
-        b.classList.toggle('current-step', i === currentStep);
-      });
-    }
-
-    document.querySelectorAll('.next-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (currentStep < totalSteps - 1) currentStep++;
-        updateSteps();
-      });
-    });
-
-    document.querySelectorAll('.prev-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (currentStep > 0) currentStep--;
-        updateSteps();
-      });
-    });
-
-    updateSteps();
-  });
-  </script>
 
 </body>
 </html>

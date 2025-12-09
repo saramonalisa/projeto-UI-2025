@@ -8,7 +8,6 @@ async function carregar(id, arquivo) {
 
 window.onload = function() {
     if (document.getElementById('header')) carregar('header', 'components/header.html');
-    if (document.getElementById('header-logged')) carregar('header-logged', 'components/header-logged.html');
     if (document.getElementById('navbar')) carregar('navbar', 'components/navbar.html');
     if (document.getElementById('footer')) carregar('footer', 'components/footer.html');
 };
