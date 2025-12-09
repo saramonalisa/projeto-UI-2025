@@ -34,36 +34,70 @@ document.addEventListener("DOMContentLoaded", () => {
           opt.textContent = 'Brasil';
           paisSelect.appendChild(opt);
           opt.selected = true;
+          });
+      }
+  
+      const estadoSelect = document.getElementById('estado');
+      let estadosData = [];
+      if (estadoSelect) {
+        fetch('data/estados.json')
+          .then(res => res.json())
+          .then(json => {
+            estadosData = Array.isArray(json.estados) ? json.estados : [];
+            const defaultCode = json.default || 'SP';
+            estadosData.forEach(c => {
+              const opt = document.createElement('option');
+              opt.value = c.code;
+              opt.textContent = c.name;
+              estadoSelect.appendChild(opt);
+            });
+  
+            const defaultOption = Array.from(estadoSelect.options).find(o => o.value === defaultCode);
+            if (defaultOption) defaultOption.selected = true;
+  
+            try {
+              new TomSelect('#estado', {
+                create: false,
+                sortField: { field: 'text', direction: 'asc' },
+                placeholder: 'Selecione seu estado...'
+              });
+            } catch (e) {
+              console.warn('Tom Select não pôde ser inicializado:', e);
+            }
+          })
+          .catch(err => {
+            console.error('Erro ao carregar data/estados.json', err);
+          });
+      }
+  
+      let currentStep = 0;
+      const steps = document.querySelectorAll('.form-section');
+      const boxes = document.querySelectorAll('.step-box');
+      const totalSteps = steps.length;
+  
+      function updateSteps() {
+        steps.forEach((el, i) => {
+          el.style.display = (i === currentStep) ? 'block' : 'none';
         });
-    }
-    let currentStep = 0;
-    const steps = document.querySelectorAll('.form-section');
-    const boxes = document.querySelectorAll('.step-box');
-    const totalSteps = steps.length;
-
-    function updateSteps() {
-      steps.forEach((el, i) => {
-        el.style.display = (i === currentStep) ? 'block' : 'none';
+        boxes.forEach((b, i) => {
+          b.classList.toggle('step-active', i < currentStep);
+          b.classList.toggle('current-step', i === currentStep);
+        });
+      }
+  
+      document.querySelectorAll('.next-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (currentStep < totalSteps - 1) currentStep++;
+          updateSteps();
+        });
       });
-      boxes.forEach((b, i) => {
-        b.classList.toggle('step-active', i < currentStep);
-        b.classList.toggle('current-step', i === currentStep);
+  
+      document.querySelectorAll('.prev-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          if (currentStep > 0) currentStep--;
+          updateSteps();
+        });
       });
-    }
-
-    document.querySelectorAll('.next-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (currentStep < totalSteps - 1) currentStep++;
-        updateSteps();
-      });
-    });
-
-    document.querySelectorAll('.prev-btn').forEach(btn => {
-      btn.addEventListener('click', () => {
-        if (currentStep > 0) currentStep--;
-        updateSteps();
-      });
-    });
-
-    updateSteps();
+  
+      updateSteps();
   });

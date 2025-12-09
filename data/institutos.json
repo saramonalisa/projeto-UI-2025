@@ -1,0 +1,178 @@
+[
+  {
+    "sigla": "USP",
+    "nome": "Universidade de São Paulo",
+    "tipo": "Universidade Pública",
+    "localizacao": "São Paulo, SP",
+    "areas_foco": ["Medicina", "Engenharia", "Humanidades", "Ciências Exatas"],
+    "website": "www.usp.br"
+  },
+  {
+    "sigla": "UNICAMP",
+    "nome": "Universidade Estadual de Campinas",
+    "tipo": "Universidade Pública",
+    "localizacao": "Campinas, SP",
+    "areas_foco": ["Tecnologia", "Ciências da Computação", "Física", "Biologia"],
+    "website": "www.unicamp.br"
+  },
+  {
+    "sigla": "UFMG",
+    "nome": "Universidade Federal de Minas Gerais",
+    "tipo": "Universidade Pública",
+    "localizacao": "Belo Horizonte, MG",
+    "areas_foco": ["Engenharia", "Medicina", "Direito", "Ciências Sociais"],
+    "website": "www.ufmg.br"
+  },
+  {
+    "sigla": "UFRJ",
+    "nome": "Universidade Federal do Rio de Janeiro",
+    "tipo": "Universidade Pública",
+    "localizacao": "Rio de Janeiro, RJ",
+    "areas_foco": ["Engenharia", "Biomedicina", "Oceanografia", "Artes"],
+    "website": "www.ufrj.br"
+  },
+  {
+    "sigla": "UFSC",
+    "nome": "Universidade Federal de Santa Catarina",
+    "tipo": "Universidade Pública",
+    "localizacao": "Florianópolis, SC",
+    "areas_foco": ["Engenharia Mecânica", "Computação", "Turismo", "Marinha"],
+    "website": "www.ufsc.br"
+  },
+  {
+    "sigla": "EMBRAPA",
+    "nome": "Empresa Brasileira de Pesquisa Agropecuária",
+    "tipo": "Instituto de Pesquisa Público",
+    "localizacao": "Brasília, DF (sede)",
+    "areas_foco": ["Agricultura", "Agropecuária", "Tecnologia Agrícola", "Sustentabilidade"],
+    "website": "www.embrapa.br"
+  },
+  {
+    "sigla": "FIOCRUZ",
+    "nome": "Fundação Oswaldo Cruz",
+    "tipo": "Instituto de Pesquisa em Saúde",
+    "localizacao": "Rio de Janeiro, RJ",
+    "areas_foco": ["Saúde Pública", "Epidemiologia", "Doenças Tropicais", "Vacinas"],
+    "website": "www.fiocruz.br"
+  },
+  {
+    "sigla": "INPE",
+    "nome": "Instituto Nacional de Pesquisas Espaciais",
+    "tipo": "Instituto de Pesquisa Espacial",
+    "localizacao": "São José dos Campos, SP",
+    "areas_foco": ["Sensoriamento Remoto", "Meteorologia", "Climatologia", "Engenharia Espacial"],
+    "website": "www.inpe.br"
+  },
+  {
+    "sigla": "ITA",
+    "nome": "Instituto Tecnológico de Aeronáutica",
+    "tipo": "Instituto Federal de Ensino Superior",
+    "localizacao": "São José dos Campos, SP",
+    "areas_foco": ["Engenharia Aeronáutica", "Aeroespacial", "Computação", "Mecânica"],
+    "website": "www.ita.br"
+  },
+  {
+    "sigla": "IMPA",
+    "nome": "Instituto de Matemática Pura e Aplicada",
+    "tipo": "Instituto de Pesquisa em Matemática",
+    "localizacao": "Rio de Janeiro, RJ",
+    "areas_foco": ["Matemática Pura", "Matemática Aplicada", "Ciência de Dados", "Educação Matemática"],
+    "website": "www.impa.br"
+  },
+  {
+    "sigla": "LNCC",
+    "nome": "Laboratório Nacional de Computação Científica",
+    "tipo": "Laboratório Nacional de Pesquisa",
+    "localizacao": "Petrópolis, RJ",
+    "areas_foco": ["Computação Científica", "Supercomputação", "Modelagem Matemática", "Bioinformática"],
+    "website": "www.lncc.br"
+  },
+  {
+    "sigla": "CBPF",
+    "nome": "Centro Brasileiro de Pesquisas Físicas",
+    "tipo": "Instituto de Pesquisa em Física",
+    "localizacao": "Rio de Janeiro, RJ",
+    "areas_foco": ["Física Teórica", "Física de Partículas", "Cosmologia", "Física Aplicada"],
+    "website": "www.cbpf.br"
+  },
+  {
+    "sigla": "IPEN",
+    "nome": "Instituto de Pesquisas Energéticas e Nucleares",
+    "tipo": "Instituto de Pesquisa Nuclear",
+    "localizacao": "São Paulo, SP",
+    "areas_foco": ["Energia Nuclear", "Medicina Nuclear", "Radiofarmácia", "Materiais Avançados"],
+    "website": "www.ipen.br"
+  },
+  {
+    "sigla": "IPT",
+    "nome": "Instituto de Pesquisas Tecnológicas",
+    "tipo": "Instituto de Pesquisa Tecnológica",
+    "localizacao": "São Paulo, SP",
+    "areas_foco": ["Engenharia Civil", "Materiais", "Metrologia", "Inovação Industrial"],
+    "website": "www.ipt.br"
+  },
+  {
+    "sigla": "Butantan",
+    "nome": "Instituto Butantan",
+    "tipo": "Instituto de Pesquisa em Imunobiológicos",
+    "localizacao": "São Paulo, SP",
+    "areas_foco": ["Imunologia", "Produção de Vacinas", "Soroterapia", "Herpetologia"],
+    "website": "www.butantan.gov.br"
+  },
+  {
+    "sigla": "UFABC",
+    "nome": "Universidade Federal do ABC",
+    "tipo": "Universidade Pública",
+    "localizacao": "Santo André, SP",
+    "areas_foco": ["Ciência e Tecnologia", "Energia", "Materiais", "Biociências"],
+    "website": "www.ufabc.edu.br"
+  },
+  {
+    "sigla": "UFRGS",
+    "nome": "Universidade Federal do Rio Grande do Sul",
+    "tipo": "Universidade Pública",
+    "localizacao": "Porto Alegre, RS",
+    "areas_foco": ["Medicina", "Agronomia", "Engenharia", "Ciências Humanas"],
+    "website": "www.ufrgs.br"
+  },
+  {
+    "sigla": "UNESP",
+    "nome": "Universidade Estadual Paulista",
+    "tipo": "Universidade Pública",
+    "localizacao": "Vários câmpus em SP",
+    "areas_foco": ["Ciências Agrárias", "Odontologia", "Veterinária", "Engenharia"],
+    "website": "www.unesp.br"
+  },
+  {
+    "sigla": "UFPE",
+    "nome": "Universidade Federal de Pernambuco",
+    "tipo": "Universidade Pública",
+    "localizacao": "Recife, PE",
+    "areas_foco": ["Computação", "Saúde", "Engenharia", "Ciências Sociais"],
+    "website": "www.ufpe.br"
+  },
+  {
+    "sigla": "UFPR",
+    "nome": "Universidade Federal do Paraná",
+    "tipo": "Universidade Pública",
+    "localizacao": "Curitiba, PR",
+    "areas_foco": ["Engenharia Florestal", "Medicina", "Direito", "Arquitetura"],
+    "website": "www.ufpr.br"
+  },
+  {
+    "sigla": "SENAI/CIMATEC",
+    "nome": "Serviço Nacional de Aprendizagem Industrial - Centro Integrado de Manufatura e Tecnologia",
+    "tipo": "Centro de Tecnologia Industrial",
+    "localizacao": "Salvador, BA",
+    "areas_foco": ["Indústria 4.0", "Manufatura Avançada", "Automação", "Materiais"],
+    "website": "www.senaicimatec.com.br"
+  },
+  {
+    "sigla": "CENA/USP",
+    "nome": "Centro de Energia Nuclear na Agricultura",
+    "tipo": "Centro de Pesquisa Especializado",
+    "localizacao": "Piracicaba, SP",
+    "areas_foco": ["Agricultura Nuclear", "Meio Ambiente", "Biologia Isotópica", "Mudanças Climáticas"],
+    "website": "www.cena.usp.br"
+  }
+]

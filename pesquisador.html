@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Plataforma Lattes - Currículo</title>
+</head>
+<body>
+
+  <div id="header"></div>
+  <div id="navbar"></div>
+
+  <main class="container min-vh-100 d-flex justify-content-center align-items-start py-5">
+    <div class="w-100" style="max-width: 80%">
+        <a class="nav-link px-4" href="javascript:void(0);" onclick="history.back(); return false;">
+          <i class="bi bi-arrow-left me-2"></i>Voltar
+        </a>
+      <div class="container my-4">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <div class="row g-3 align-items-center">
+              <div class="col-md-3 text-center">
+                <img id="curriculoFoto" src="assets/img/placeholder.png" alt="Foto" class="profile-photo mb-2">
+                <div class="text-muted">ID Lattes: <strong id="curriculoId">0000-0000</strong></div>
+              </div>
+
+              <div class="col-md-9">
+                <div class="text-end">
+                  <button class="btn btn-outline-secondary btn-sm me-2">
+                    <i class="bi bi-graph-up"></i> Indicadores
+                  </button>
+                  <button class="btn btn-outline-dark btn-sm" id="btnContato">
+                    <i class="bi bi-envelope"></i> Contato
+                  </button>
+                </div>
+                <h3 id="curriculoNome" class="mb-1">Carregando...</h3>
+                <div class="mb-2" id="curriculoInstituicao"></div>
+
+                <div class="row row-cols-1 row-cols-sm-2 g-2">
+                  <div class="col"><span class="meta-label">E-mail</span><div id="curriculoEmail">carregando...</div></div>
+                  <div class="col"><span class="meta-label">Áreas de Atuação</span><div id="curriculoAreas">carregando...</div></div>
+                  <div class="col"><span class="meta-label">ORCID</span><div id="curriculoOrcid">-</div></div>
+                  <div class="col"><span class="meta-label">Localização</span><div id="curriculoLocalizacao">-</div></div>
+                </div>
+              </div>
+            </div>
+
+            <hr class="my-3">
+
+            <nav class="no-print">
+              <div class="d-flex flex-wrap gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="#formacao">Formação</a>
+                <a class="btn btn-outline-primary btn-sm" href="#experiencia">Experiência</a>
+                <a class="btn btn-outline-primary btn-sm" href="#producao">Produção</a>
+                <a class="btn btn-outline-primary btn-sm" href="#orientacoes">Orientações</a>
+                <a class="btn btn-outline-primary btn-sm" href="#projetos">Projetos</a>
+              </div>
+            </nav>
+
+            <div class="row mt-4">
+              <div class="col-lg-4">
+                <div class="card mb-3">
+                  <div class="card-body">
+                    <h6 class="section-title">Resumo</h6>
+                    <p id="curriculoResumo" class="small text-muted">Carregando informações...</p>
+
+                    <hr>
+                    <h6 class="section-title">Links</h6>
+                    <ul class="list-unstyled small mb-0">
+                      <li><a id="curriculoLinkLattes" href="#" target="_blank">Plataforma Lattes</a></li>
+                      <li><a id="curriculoLinkGoogleScholar" href="#" target="_blank">Google Scholar</a></li>
+                    </ul>
+
+                    <hr>
+                    <h6 class="section-title">Idiomas</h6>
+                    <ul class="list-unstyled small mb-0">
+                      <li>Português — Nativo</li>
+                      <li>Inglês — Avançado</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <div class="card-body">
+                    <h6 class="section-title">Dados Complementares</h6>
+                    <div class="small">
+                      <div><strong>Status:</strong> <span id="curriculoStatus">Ativo</span></div>
+                      <div><strong>Última atualização:</strong> <span id="curriculoAtualizacao">2024</span></div>
+                      <div class="mt-2" id="curriculoPremios"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-8">
+
+                <section id="formacao" class="mb-4">
+                  <h5 class="mb-3 card-header-alt p-2 rounded">Formação acadêmica</h5>
+                  <div class="list-group" id="curriculoFormacao">
+                    <div class="list-group-item">
+                      <div class="text-center py-3">
+                        <div class="spinner-border spinner-border-sm text-primary me-2" role="status"></div>
+                        Carregando formação...
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section id="experiencia" class="mb-4">
+                  <h5 class="mb-3 card-header-alt p-2 rounded">Experiência profissional</h5>
+                  <div id="curriculoExperiencia">
+                    <p class="text-muted small">Carregando experiência profissional...</p>
+                  </div>
+                </section>
+
+                <section id="producao" class="mb-4">
+                  <h5 class="mb-3 card-header-alt p-2 rounded">Produção científica</h5>
+                  <div id="curriculoProducao">
+                    <p class="text-muted small">Carregando produção científica...</p>
+                  </div>
+                </section>
+
+                <section id="orientacoes" class="mb-4">
+                  <h5 class="mb-3 card-header-alt p-2 rounded">Orientações</h5>
+                  <div id="curriculoOrientacoes">
+                    <p class="text-muted small">Carregando orientações...</p>
+                  </div>
+                </section>
+
+                <section id="projetos" class="mb-4">
+                  <h5 class="mb-3 card-header-alt p-2 rounded">Projetos de pesquisa</h5>
+                  <div id="curriculoProjetos">
+                    <p class="text-muted small">Carregando projetos...</p>
+                  </div>
+                </section>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer"></div>
+
+  <script src="assets/js/component-loader.js"></script>
+  <script src="assets/js/geradorCurriculo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

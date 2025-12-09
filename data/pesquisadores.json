@@ -1,0 +1,247 @@
+[
+  {
+    "nome": "Marcelo da Silva",
+    "inst": "Universidade Federal X — Professor",
+    "area": "IA, Machine Learning",
+    "id": "0000-0000",
+    "desc": "Publicações: Artigo A, Artigo B."
+  },
+  {
+    "nome": "Maria Oliveira",
+    "inst": "Instituto Y — Doutoranda",
+    "area": "Genômica, Biotecnologia",
+    "id": "1111-1111",
+    "desc": "Projetos: Genoma Verde."
+  },
+  {
+    "nome": "Carlos Pereira",
+    "inst": "Centro Z — Engenheiro de Software",
+    "area": "UI, Usabilidade",
+    "id": "2222-2222",
+    "desc": "Experiência: 10 anos em UX."
+  },
+  {
+    "nome": "Ana Costa",
+    "inst": "UFABC — Pesquisadora",
+    "area": "Robótica, Controle",
+    "id": "3333-3333",
+    "desc": "Publicações: Robô A, Robô B."
+  },
+  {
+    "nome": "João Mendes",
+    "inst": "Instituto Q — Professor",
+    "area": "Física Quântica",
+    "id": "4444-4444",
+    "desc": "Projetos: Matéria Escura."
+  },
+  {
+    "nome": "Renata Dias",
+    "inst": "USP — Doutoranda",
+    "area": "Computação Gráfica",
+    "id": "5555-5555",
+    "desc": "Experiência: Renderização 3D."
+  },
+  {
+    "nome": "Fernando Santos",
+    "inst": "UNICAMP — Professor Associado",
+    "area": "Bioinformática, Biologia Computacional",
+    "id": "6666-6666",
+    "desc": "Publicações: Algoritmo Genético X, Modelo Proteico Y."
+  },
+  {
+    "nome": "Juliana Lima",
+    "inst": "Hospital Albert Einstein — Pesquisadora",
+    "area": "Medicina Translacional, Oncologia",
+    "id": "7777-7777",
+    "desc": "Projetos: Terapia Celular para Câncer."
+  },
+  {
+    "nome": "Ricardo Almeida",
+    "inst": "Google Brasil — Cientista de Dados Sênior",
+    "area": "Big Data, Analytics",
+    "id": "8888-8888",
+    "desc": "Experiência: Sistemas de recomendação em escala."
+  },
+  {
+    "nome": "Beatriz Rocha",
+    "inst": "EMBRAPA — Pesquisadora",
+    "area": "AgroTec, Agricultura de Precisão",
+    "id": "9999-9999",
+    "desc": "Publicações: IoT no campo, Sensores agrícolas."
+  },
+  {
+    "nome": "Pedro Henrique",
+    "inst": "ITA — Professor",
+    "area": "Aeroespacial, Propulsão",
+    "id": "AAAA-AAAA",
+    "desc": "Projetos: Motor a jato de nova geração."
+  },
+  {
+    "nome": "Camila Nunes",
+    "inst": "FIOCRUZ — Doutoranda",
+    "area": "Epidemiologia, Saúde Pública",
+    "id": "BBBB-BBBB",
+    "desc": "Experiência: Modelagem de pandemias."
+  },
+  {
+    "nome": "Eduardo Torres",
+    "inst": "Microsoft Research — Pesquisador",
+    "area": "Computação Quântica, Criptografia",
+    "id": "CCCC-CCCC",
+    "desc": "Publicações: Algoritmo quântico Z, Segurança Q."
+  },
+  {
+    "nome": "Tatiane Souza",
+    "inst": "Petrobras — Engenheira de Petróleo",
+    "area": "Energia, Sustentabilidade",
+    "id": "DDDD-DDDD",
+    "desc": "Projetos: Captura de carbono offshore."
+  },
+  {
+    "nome": "Roberto Castro",
+    "inst": "SENAI — Tecnólogo",
+    "area": "Indústria 4.0, Manufatura Aditiva",
+    "id": "EEEE-EEEE",
+    "desc": "Experiência: Impressão 3D de metais."
+  },
+  {
+    "nome": "Fernando Santos",
+    "inst": "UNICAMP — Professor Associado",
+    "area": "Bioinformática, Biologia Computacional",
+    "id": "6666-6666",
+    "desc": "Publicações: Algoritmo Genético X, Modelo Proteico Y."
+  },
+  {
+    "nome": "Juliana Lima",
+    "inst": "Hospital Albert Einstein — Pesquisadora",
+    "area": "Medicina Translacional, Oncologia",
+    "id": "7777-7777",
+    "desc": "Projetos: Terapia Celular para Câncer."
+  },
+  {
+    "nome": "Ricardo Almeida",
+    "inst": "Google Brasil — Cientista de Dados Sênior",
+    "area": "Big Data, Analytics",
+    "id": "8888-8888",
+    "desc": "Experiência: Sistemas de recomendação em escala."
+  },
+  {
+    "nome": "Beatriz Rocha",
+    "inst": "EMBRAPA — Pesquisadora",
+    "area": "AgroTec, Agricultura de Precisão",
+    "id": "9999-9999",
+    "desc": "Publicações: IoT no campo, Sensores agrícolas."
+  },
+  {
+    "nome": "Pedro Henrique",
+    "inst": "ITA — Professor",
+    "area": "Aeroespacial, Propulsão",
+    "id": "AAAA-AAAA",
+    "desc": "Projetos: Motor a jato de nova geração."
+  },
+  {
+    "nome": "Camila Nunes",
+    "inst": "FIOCRUZ — Doutoranda",
+    "area": "Epidemiologia, Saúde Pública",
+    "id": "BBBB-BBBB",
+    "desc": "Experiência: Modelagem de pandemias."
+  },
+  {
+    "nome": "Eduardo Torres",
+    "inst": "Microsoft Research — Pesquisador",
+    "area": "Computação Quântica, Criptografia",
+    "id": "CCCC-CCCC",
+    "desc": "Publicações: Algoritmo quântico Z, Segurança Q."
+  },
+  {
+    "nome": "Tatiane Souza",
+    "inst": "Petrobras — Engenheira de Petróleo",
+    "area": "Energia, Sustentabilidade",
+    "id": "DDDD-DDDD",
+    "desc": "Projetos: Captura de carbono offshore."
+  },
+  {
+    "nome": "Roberto Castro",
+    "inst": "SENAI — Tecnólogo",
+    "area": "Indústria 4.0, Manufatura Aditiva",
+    "id": "EEEE-EEEE",
+    "desc": "Experiência: Impressão 3D de metais."
+  },
+  {
+    "nome": "Larissa Monteiro",
+    "inst": "INPE — Pesquisadora",
+    "area": "Sensoriamento Remoto, Geoprocessamento",
+    "id": "FFFF-FFFF",
+    "desc": "Publicações: Monitoramento de desmatamento por satélite."
+  },
+  {
+    "nome": "Gabriel Martins",
+    "inst": "Nubank — Engenheiro de Machine Learning",
+    "area": "FinTech, Risk Models",
+    "id": "GGGG-GGGG",
+    "desc": "Experiência: Modelos de crédito para milhões de usuários."
+  },
+  {
+    "nome": "Isabela Cardoso",
+    "inst": "UFMG — Professora",
+    "area": "Linguística Computacional, PLN",
+    "id": "HHHH-HHHH",
+    "desc": "Projetos: Tradução automática para línguas indígenas."
+  },
+  {
+    "nome": "Victor Hugo",
+    "inst": "Instituto Butantan — Pós-doutorando",
+    "area": "Imunologia, Desenvolvimento de Vacinas",
+    "id": "IIII-IIII",
+    "desc": "Publicações: Nova plataforma vacinal baseada em mRNA."
+  },
+  {
+    "nome": "Patrícia Andrade",
+    "inst": "TOTVS — Arquiteta de Software",
+    "area": "Sistemas ERP, Cloud Computing",
+    "id": "JJJJ-JJJJ",
+    "desc": "Experiência: Migração de sistemas legados para nuvem."
+  },
+  {
+    "nome": "Rafael Costa",
+    "inst": "UFSCAR — Professor",
+    "area": "Materiais Avançados, Nanotecnologia",
+    "id": "KKKK-KKKK",
+    "desc": "Projetos: Grafeno para aplicações médicas."
+  },
+  {
+    "nome": "Daniela Freitas",
+    "inst": "Hospital Sírio-Libanês — Geneticista",
+    "area": "Medicina Personalizada, Diagnóstico Molecular",
+    "id": "LLLL-LLLL",
+    "desc": "Publicações: Painéis genéticos para doenças raras."
+  },
+  {
+    "nome": "Leonardo Barbosa",
+    "inst": "Globo — Especialista em Realidade Virtual",
+    "area": "VR/AR, Produção de Conteúdo Imersivo",
+    "id": "MMMM-MMMM",
+    "desc": "Experiência: Transmissões esportivas em 360°."
+  },
+  {
+    "nome": "Mariana Torres",
+    "inst": "CENA/USP — Pesquisadora",
+    "area": "Mudanças Climáticas, Ciclo do Carbono",
+    "id": "NNNN-NNNN",
+    "desc": "Projetos: Sequestro de carbono em solos tropicais."
+  },
+  {
+    "nome": "Felipe Oliveira",
+    "inst": "WEG — Engenheiro Eletricista",
+    "area": "Motores Elétricos, Eficiência Energética",
+    "id": "OOOO-OOOO",
+    "desc": "Publicações: Novo design de motor para veículos elétricos."
+  },
+  {
+    "nome": "Amanda Silva",
+    "inst": "UNIFESP — Doutoranda",
+    "area": "Neurociência Computacional, Interfaces Cérebro-Máquina",
+    "id": "PPPP-PPPP",
+    "desc": "Experiência: Decodificação de sinais neurais em tempo real."
+  }
+]
